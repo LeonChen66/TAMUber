@@ -1,0 +1,21 @@
+.container
+	%h1 Create New Driver
+
+	= form_tag drivers_path do
+
+		.form-group
+			= label :driver, :name, 'Name'
+			= text_field :driver, :name, :class => "form-control"
+
+		.form-group
+			= label :driver, :isAvailable, 'Is Available (true/false)'
+			= text_field :driver, :isAvailable, :class => "form-control"
+		
+		.form-group
+			= label :driver, :Email, 'E-mail'
+			= text_field :driver, :Email, :class => "form-control"
+		.form-group
+			= label :driver, :UIN, 'UIN'
+			= text_field :driver, :UIN, :class => "form-control"
+
+		= submit_tag 'Create Driver', :class => "btn btn-outline-primary"

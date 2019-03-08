@@ -1,0 +1,24 @@
+.container
+	%h1 All Drivers
+
+	%h3 #{flash[:notice]}
+
+	.table-responsive
+		%table#drivers.table
+			%thead
+				%tr
+					%th Name
+					%th Is Available
+					%th E-mail
+					%th UIN
+			%tbody
+				- @drivers.each do |driver|
+					%tr
+						%td= driver.name
+						%td= driver.isAvailable
+						%td= driver.Email
+						%td= driver.UIN	
+						%td= link_to 'Update ' + driver.name, edit_driver_path(driver), :class => "btn btn-outline-primary"
+						%td= button_to 'Delete ' + driver.name, driver_path(driver), :method => :delete, :confirm => 'Are you sure?', :class => "btn btn-outline-danger"
+
+	= link_to 'Add New Driver', new_driver_path, :class => "btn btn-outline-primary"

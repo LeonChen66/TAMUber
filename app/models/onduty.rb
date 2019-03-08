@@ -1,0 +1,2 @@
+class Onduty < ApplicationRecord
+end

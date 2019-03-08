@@ -1,0 +1,20 @@
+.container
+	%h1 All Vehicles
+
+	%h3 #{flash[:notice]}
+
+	.table-responsive
+		%table#vehicles.table
+			%thead
+				%tr
+					%th Plate Number
+					%th Is Available
+			%tbody
+				- @vehicles.each do |vehicle|
+					%tr
+						%td= vehicle.name
+						%td= vehicle.isAvailable
+						%td= link_to 'Update ' + vehicle.name, edit_vehicle_path(vehicle), :class => "btn btn-outline-primary"
+						%td= button_to 'Delete ' + vehicle.name, vehicle_path(vehicle), :method => :delete, :confirm => 'Are you sure?', :class => "btn btn-outline-danger"
+
+	= link_to 'Add New Vehicle', new_vehicle_path, :class => "btn btn-outline-primary"

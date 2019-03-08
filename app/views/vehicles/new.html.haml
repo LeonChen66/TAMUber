@@ -1,0 +1,14 @@
+.container
+	%h1 Create New Vehicle
+
+	= form_tag vehicles_path do
+
+		.form-group
+			= label :vehicle, :name, 'Plate Number'
+			= text_field :vehicle, :name, :class => "form-control"
+
+		.form-group
+			= label :vehicle, :isAvailable, 'Is Available? (true/false)'
+			= text_field :vehicle, :isAvailable, :class => "form-control"
+
+		= submit_tag 'Create Vehicle', :class => "btn btn-outline-primary"

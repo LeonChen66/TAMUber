@@ -1,0 +1,10 @@
+.container
+	%h1 Edit Onduty #{@onduty.id.to_s}
+
+	= form_tag alert_path(@onduty), :method => :put do
+
+		.form-group
+			= label :onduty, :isAlert, 'Is Alert (true/false)'
+			= text_field :onduty, :isAlert, :class => "form-control"
+
+		= submit_tag 'Update Vehicle Info', :class => "btn btn-outline-primary"

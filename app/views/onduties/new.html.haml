@@ -1,0 +1,50 @@
+.container
+	%h1 Create New Onduty
+
+	= form_tag onduties_path do
+
+		.form-group
+			= label :onduty, :driverName, 'DriverName'
+			= text_field :onduty, :driverName, :class => "form-control"
+
+		.form-group
+			= label :onduty, :plateNumber, 'PlateNumber'
+			= text_field :onduty, :plateNumber, :class => "form-control"
+
+		.form-group
+			= label :onduty, :studentName, 'studentName'
+			= text_field :onduty, :studentName, :class => "form-control"
+
+		.form-group
+			= label :onduty, :StudentId, 'StudentId'
+			= text_field :onduty, :studentId, :class => "form-control"
+
+		.form-group
+			= label :onduty, :vehicleLat, 'VehicleLat'
+			= text_field :onduty, :vehicleLat, :class => "form-control"
+
+		.form-group
+			= label :onduty, :vehicleLng, 'VehicleLng'
+			= text_field :onduty, :vehicleLng, :class => "form-control"
+
+		.form-group
+			= label :onduty, :startLat, 'StartLat'
+			= text_field :onduty, :startLat, :class => "form-control"
+
+		.form-group
+			= label :onduty, :startLng, 'StartLng'
+			= text_field :onduty, :startLng, :class => "form-control"
+
+		.form-group
+			= label :onduty, :endLat, 'EndLat'
+			= text_field :onduty, :endLat, :class => "form-control"
+
+		.form-group
+			= label :onduty, :endLng, 'EndLng'
+			= text_field :onduty, :endLng, :class => "form-control"
+
+		.form-group
+			= label :onduty, :isFinished, 'Isfinished'
+			= text_field :onduty, :isFinished, :class => "form-control"
+
+		= submit_tag 'Create onduty', :class => "btn btn-outline-primary"

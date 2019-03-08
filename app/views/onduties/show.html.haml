@@ -1,0 +1,164 @@
+.container
+	#map
+
+	%h3 #{flash[:notice]}
+
+	%p
+		%strong update status:
+		%span#info getting data
+
+	%p
+		%strong driverName:
+		= @onduty.driverName
+
+	%p
+		%strong plateNumber:
+		= @onduty.plateNumber
+
+	%p
+		%strong studentName:
+		= @onduty.studentName
+
+	%p
+		%strong studentId:
+		= @onduty.studentId
+
+	%p
+		%strong vehicleLat:
+		%span#vehicleLat= @onduty.vehicleLat
+
+	%p
+		%strong vehicleLng:
+		%span#vehicleLng= @onduty.vehicleLng
+
+	%p
+		%strong startLat:
+		%span= @onduty.startLat
+
+	%p
+		%strong startLng:
+		%span= @onduty.startLng
+
+	%p
+		%strong endLat:
+		%span= @onduty.endLat
+
+	%p
+		%strong endLng:
+		%span= @onduty.endLng
+
+	%p
+		%strong isFinished:
+		%span#isFinished= @onduty.isFinished
+
+	= link_to 'Back', onduties_path
+
+:javascript
+	let duty = #{ @onduty.to_json.html_safe };
+	let handler = Gmaps.build('Google');
+	let directionsDisplay = new google.maps.DirectionsRenderer();
+	let directionsService = new google.maps.DirectionsService();
+	let cooridinate = [];
+	let index = 0;
+	let updateRate = 3000;
+	let mapZoom = 15;
+
+	handler.buildMap({
+		provider: {},
+		internal: { id: 'map' }
+	}, () => {
+		directionsDisplay.setMap(handler.getMap());
+		let markers = handler.addMarkers([getVehicleMarker(duty)]);
+	});
+
+	function getGMapRequest(startLat, startLng, endLat, endLng) {
+		let origin = new google.maps.LatLng(startLat, startLng);
+		let destination = new google.maps.LatLng(endLat, endLng);
+		return {
+			origin,
+			destination,
+			travelMode: google.maps.TravelMode.DRIVING
+		};
+	}
+
+	function drawRoute() {
+		let request = getGMapRequest(duty.startLat, duty.startLng, duty.endLat, duty.endLng);
+		directionsService.route(request, (response, status) => {
+			if (status == google.maps.DirectionsStatus.OK) {
+				directionsDisplay.setDirections(response);
+			}
+			else {
+				window.alert('Directions request failed due to ' + status);
+			}
+		});
+	}
+
+	function calcCoordinate() {
+		let request = getGMapRequest(duty.vehicleLat, duty.vehicleLng, duty.endLat, duty.endLng);
+		directionsService.route(request, (response, status) => {
+			if (status == google.maps.DirectionsStatus.OK) {
+				cooridinate = response.routes[0].overview_path;
+			}
+			else {
+				window.alert('Directions request failed due to ' + status);
+			}
+		});
+	}
+
+	drawRoute();
+	calcCoordinate();
+	console.log("Start");
+	setTimeout(updateCarPos, updateRate);
+
+	function updateCarPos() {
+		let i = index;
+		document.getElementById("info").innerHTML = i + 1 + "/" + cooridinate.length;
+		console.log("update location " + i);
+
+		$.ajax({
+			type: "POST",
+			url: Routes.update_car_pos_path(),
+			data: {
+				id_: duty.id,
+				lat: cooridinate[i].lat(),
+				lng: cooridinate[i].lng(),
+				isFinished: 'false'
+			},
+			success: function(post){ console.log('success'); },
+			error: function(post){ console.log(this); }
+		});
+
+		duty.vehicleLat = cooridinate[i].lat();
+		duty.vehicleLng = cooridinate[i].lng();
+
+		document.getElementById("vehicleLat").innerHTML = duty.vehicleLat;
+		document.getElementById("vehicleLng").innerHTML = duty.vehicleLng;
+		index += 1;
+
+		handler.buildMap({
+			internal: { id: 'map' }
+		}, () => {
+			directionsDisplay.setMap(handler.getMap());
+			let marker = handler.addMarkers([getVehicleMarker(duty)])[0];
+		});
+
+		if (index < cooridinate.length) {
+			setTimeout(updateCarPos, updateRate);
+		} else {
+			$.ajax({
+				type: "POST",
+				url: Routes.update_car_pos_path(),
+				data: {
+					id_: duty.id,
+					driverName: duty.driverName,
+					plateNumber: duty.plateNumber,
+					isFinished: 'true'
+				},
+				success: (post) => { console.log('success') },
+				error: (post) => { console.log(this) }
+			});
+
+			document.getElementById("isFinished").innerHTML = "True";
+			console.log("Finish");
+		}
+	}

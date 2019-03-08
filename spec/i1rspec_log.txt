@@ -1,0 +1,8 @@
+...........
+
+1 deprecation warning total
+
+Finished in 0.21084 seconds (files took 2.08 seconds to load)
+11 examples, 0 failures
+
+Coverage report generated for RSpec to /Users/amychien/Desktop/SE/TAMUber_new/coverage. 29 / 46 LOC (63.04%) covered.

@@ -1,0 +1,8 @@
+production:
+  address: "smtp.mailgun.org"
+  port: 587"
+  domain: "gmail.com"
+  authentication: "plain"
+  user_name: "@gmail.com", #email ...@gmail
+  password: "", #password 
+  enable_starttls_auto: true 

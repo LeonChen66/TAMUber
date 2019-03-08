@@ -1,0 +1,30 @@
+.container
+	%h1 Create New Request
+
+	= form_tag requests_path do
+
+		.form-group
+			= label :request, :name, 'Name'
+			= text_field :request, :name, :class => "form-control"
+
+		.form-group
+			= label :request, :studentId, 'StudentId'
+			= text_field :request, :studentId, :class => "form-control"
+
+		.form-group
+			= label :request, :startLat, 'StartLat'
+			= text_field :request, :startLat, :class => "form-control"
+
+		.form-group
+			= label :request, :startLng, 'StartLng'
+			= text_field :request, :startLng, :class => "form-control"
+
+		.form-group
+			= label :request, :endLat, 'EndLat'
+			= text_field :request, :endLat, :class => "form-control"
+
+		.form-group
+			= label :request, :endLng, 'EndLng'
+			= text_field :request, :endLng, :class => "form-control"
+
+		= submit_tag 'Create Request', :class => "btn btn-outline-primary"

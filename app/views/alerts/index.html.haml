@@ -1,0 +1,20 @@
+.container
+	%h3 #{flash[:notice]}
+
+	.table-responsive
+		%table#Onduties.table
+			%thead
+				%tr
+					%th ID
+					%th DriverName
+					%th PlateNumber
+					%th Is Alert
+
+			%tbody
+				- @onduties.each do |onduty|
+					%tr
+						%td= link_to onduty.id, onduty_path(onduty), :data => { :reload => true }
+						%td= onduty.driverName
+						%td= onduty.plateNumber
+						%td= onduty.isAlert
+						%td= link_to 'Update ' + onduty.id.to_s, edit_alert_path(onduty), :class => "btn btn-outline-primary"

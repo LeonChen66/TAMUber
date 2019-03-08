@@ -1,0 +1,27 @@
+.container
+	%h1 All Requests
+
+	%h3 #{flash[:notice]}
+
+	.table-responsive
+		%table#Requests.table
+			%thead
+				%tr
+					%th Name
+					%th Studentid
+					%th Startlat
+					%th Startlng
+					%th Endlat
+					%th Endlng
+
+			%tbody
+				- @requests.each do |request|
+					%tr
+						%td= request.name
+						%td= request.studentId
+						%td= request.startLat
+						%td= request.startLng
+						%td= request.endLat
+						%td= request.endLng
+
+	= link_to 'Add New Request', new_request_path, :class => "btn btn-outline-primary"

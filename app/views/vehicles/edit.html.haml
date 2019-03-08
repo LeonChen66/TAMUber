@@ -1,0 +1,14 @@
+.container
+	%h1 Edit Vehicle #{@vehicle.name}
+
+	= form_tag vehicle_path(@vehicle), :method => :put do
+
+		.form-group
+			= label :vehicle, :name, 'Plate Number'
+			= text_field :vehicle, :name, :class => "form-control"
+
+		.form-group
+			= label :vehicle, :isAvailable, 'Is Available (true/false)'
+			= text_field :vehicle, :isAvailable, :class => "form-control"
+
+		= submit_tag 'Update Vehicle Info', :class => "btn btn-outline-primary"
