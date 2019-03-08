@@ -3,5 +3,5 @@
 #### TAMUber Vehicle Interface : TAMU Uber SW control of autonomous vehicle for handicapped students.
 
 #### Outline Poster
-![image](http://github.com/LeonChen66/TAMUber/raw/master/reports/Poster.jpg)
+![image](http://github.com/LeonChen66/TAMUber/master/reports/Poster.jpg)
 
