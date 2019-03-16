@@ -59,6 +59,9 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
     capybara (2.18.0)
@@ -122,6 +125,8 @@ GEM
     factory_girl_rails (1.7.0)
       factory_girl (~> 2.6.0)
       railties (>= 3.0.0)
+    faker (1.9.3)
+      i18n (>= 0.7)
     ffi (1.9.25)
     fullcalendar-rails (3.9.0.0)
       jquery-rails (>= 4.0.5, < 5.0.0)
@@ -257,6 +262,9 @@ GEM
     selenium-webdriver (3.14.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
+    simple_form (4.1.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     simplecov (0.16.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
@@ -310,6 +318,7 @@ DEPENDENCIES
   ZenTest (= 4.11.0)
   bootsnap (>= 1.1.0)
   bootstrap
+  bootstrap-sass (~> 3.3.5)
   byebug
   capybara (~> 2.8)
   chromedriver-helper
@@ -320,6 +329,7 @@ DEPENDENCIES
   devise
   factory_girl (~> 2.2)
   factory_girl_rails
+  faker
   fullcalendar-rails
   gmaps4rails
   haml
@@ -329,7 +339,7 @@ DEPENDENCIES
   launchy
   letter_opener
   listen (>= 3.0.5, < 3.2)
-  momentjs-rails
+  momentjs-rails (>= 2.9.0)
   pg
   puma (~> 3.11)
   rails (~> 5.2.1)
@@ -337,6 +347,7 @@ DEPENDENCIES
   rspec-rails (= 3.7.2)
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   simplecov
   spring
   spring-watcher-listen (~> 2.0.0)

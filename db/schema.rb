@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_08_053656) do
+ActiveRecord::Schema.define(version: 2019_03_16_170323) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2019_03_08_053656) do
     t.datetime "updated_at", null: false
     t.string "Email"
     t.string "UIN"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.datetime "start"
+    t.datetime "end"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "onduties", force: :cascade do |t|

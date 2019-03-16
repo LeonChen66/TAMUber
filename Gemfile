@@ -38,8 +38,6 @@ gem 'bootstrap'
 # Access rails routes by javascript
 gem "js-routes"
 
-gem 'fullcalendar-rails'
-gem 'momentjs-rails'
 
 
 group :development, :test do
@@ -84,3 +82,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "letter_opener", :group => :development
+gem 'fullcalendar-rails'
+gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'faker'
+gem 'momentjs-rails', '>= 2.9.0'
