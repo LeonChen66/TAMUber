@@ -81,9 +81,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# send letter locally
 gem "letter_opener", :group => :development
 gem 'fullcalendar-rails'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'faker'
 gem 'momentjs-rails', '>= 2.9.0'
+# erb to haml
+gem "haml-rails", "~> 1.0"

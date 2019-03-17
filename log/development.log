@@ -7636,3 +7636,72 @@ Processing by EventsController#new as JS
 Completed 200 OK in 111ms (Views: 84.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-16 13:48:04 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 535ms (Views: 506.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552762085618" for 127.0.0.1 at 2019-03-16 13:48:05 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552762085618"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (8.2ms)
+Completed 200 OK in 29ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-16 13:48:07 -0500
+Processing by SchedulesController#index as HTML
+  Rendering schedules/index.html.erb within layouts/application
+  Rendered schedules/index.html.erb within layouts/application (98.6ms)
+Completed 200 OK in 139ms (Views: 135.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-16 13:48:07 -0500
+Processing by SchedulesController#index as HTML
+  Rendering schedules/index.html.erb within layouts/application
+  Rendered schedules/index.html.erb within layouts/application (96.2ms)
+Completed 200 OK in 135ms (Views: 132.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552762087701" for 127.0.0.1 at 2019-03-16 13:48:07 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552762087701"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (1.9ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/5/edit?_=1552762087702" for 127.0.0.1 at 2019-03-16 13:48:10 -0500
+Processing by EventsController#edit as JS
+  Parameters: {"_"=>"1552762087702", "id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:33
+  Rendering events/edit.js.erb
+  Rendered events/_form.html.erb (133.6ms)
+  Rendered events/_edit.html.erb (157.8ms)
+  Rendered events/edit.js.erb (183.1ms)
+Completed 200 OK in 246ms (Views: 215.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552762087703" for 127.0.0.1 at 2019-03-16 13:48:16 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552762087703"}
+  Rendering events/new.js.erb
+  Rendered events/_form.html.erb (7.4ms)
+  Rendered events/_new.html.erb (28.7ms)
+  Rendered events/new.js.erb (52.3ms)
+Completed 200 OK in 112ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
