@@ -8864,3 +8864,44 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 399ms (Views: 397.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-16 21:46:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by OndutiesController#index as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-16 21:46:42 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (1.9ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 414ms (Views: 405.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-16 21:46:45 -0500
+Processing by SchedulesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-16 21:46:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (4.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 170ms (Views: 168.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-16 21:46:45 -0500
+Processing by SchedulesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-16 21:46:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.8ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 130ms (Views: 128.5ms | ActiveRecord: 0.0ms)
+
+
