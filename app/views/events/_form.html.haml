@@ -4,7 +4,8 @@
     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
-    = f.input :driver_id, as: :select, collection: [['8',8], ['Green','green'], ['Red','red']]
+    = f.input :driver_id, as: :select, collection: @drivers, include_blank: false
+    / ,:label_method => :@drivers.UIN :value_method => :id [['8',8], ['Green','green'], ['Red','red']]
   .form-actions
     = f.button :submit
     = link_to 'Delete',                      |

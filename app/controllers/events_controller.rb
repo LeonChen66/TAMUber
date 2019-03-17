@@ -10,6 +10,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @drivers = Driver.all
   end
 
   def edit
@@ -22,10 +23,12 @@ class EventsController < ApplicationController
 
   def update
     @event.update(event_params)
+    redirect_to schedules_path
   end
 
   def destroy
     @event.destroy
+    redirect_to schedules_path
   end
 
   private

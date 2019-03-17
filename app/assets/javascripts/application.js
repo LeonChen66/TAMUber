@@ -46,7 +46,9 @@ initialize_calendar = function () {
             selectHelper: true,
             editable: true,
             eventLimit: true,
+            
             events: '/events.json',
+            
             dayClick: function (date, jsEvent, view) {
                 $('#calendar').fullCalendar('changeView', 'agendaDay')
                 $('#calendar').fullCalendar('gotoDate', date);
