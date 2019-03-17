@@ -31,8 +31,17 @@ Rails.application.configure do
 	config.active_storage.service = :local
 
 	# Don't care if the mailer can't send.
-	config.action_mailer.delivery_method = :letter_opener
-	config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+	config.action_mailer.delivery_method = :smtp
+	config.action_mailer.default_url_options = { host: "http://localhost:3000"} #你的網址,絕對網址 
+	config.action_mailer.smtp_settings = {
+		:address => "smtp.gmail.com",
+		:port => "587",
+		:domain => "gmail.com",
+		:authentication => "plain",
+		:user_name => "tamuerinterface@gmail.com", #你的信箱
+		:password => "hairprotection", #信箱密碼
+		:enable_starttls_auto => true
+	}
 
 	config.action_mailer.perform_caching = false
 
