@@ -8905,3 +8905,2917 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 130ms (Views: 128.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:22:38 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by OndutiesController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-17 12:22:38 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.5ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 645ms (Views: 631.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-17 12:22:43 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9lWbzf8mr4q0PSZB2zGXyi/7BSEaxF6VS58IF/YWzTDGETpeSp3hYRIQKqsM3Fxdd/uh+VYkagJfk6GCYAi8Tg==", "user"=>{"email"=>"leo021566@tamu.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "leo021566@tamu.edu"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 121ms (ActiveRecord: 0.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9lWbzf8mr4q0PSZB2zGXyi/7BSEaxF6VS58IF/YWzTDGETpeSp3hYRIQKqsM3Fxdd/uh+VYkagJfk6GCYAi8Tg==", "user"=>{"email"=>"leo021566@tamu.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 247ms (Views: 134.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-17 12:22:46 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rioN6al5oWosAEPbE/nGb+oMKgslYpAYoy4Mou+NDcSebqx6HMLvgYotTzHEFA34sgyO02mCpI+3IqU3eZN8ug==", "user"=>{"email"=>"leo021566@tamu.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "leo021566@tamu.edu"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:22:46 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.5ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 127ms (Views: 112.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552843367134" for 127.0.0.1 at 2019-03-17 12:22:47 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552843367134"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (9.3ms)
+Completed 200 OK in 26ms (Views: 19.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 12:22:49 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (90.6ms)
+Completed 200 OK in 139ms (Views: 133.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 12:22:49 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (87.4ms)
+Completed 200 OK in 133ms (Views: 129.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552843369760" for 127.0.0.1 at 2019-03-17 12:22:49 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552843369760"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.3ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/5/edit?_=1552843369761" for 127.0.0.1 at 2019-03-17 12:22:51 -0500
+Processing by EventsController#edit as JS
+  Parameters: {"_"=>"1552843369761", "id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:33
+  Rendering events/edit.js.haml
+  Rendered events/_form.html.haml (61.8ms)
+  Rendered events/_edit.html.haml (86.9ms)
+  Rendered events/edit.js.haml (113.4ms)
+Completed 200 OK in 175ms (Views: 144.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552843369762" for 127.0.0.1 at 2019-03-17 12:23:00 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552843369762"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (13.1ms)
+  Rendered events/_new.html.haml (41.1ms)
+  Rendered events/new.js.haml (65.0ms)
+Completed 200 OK in 122ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new?_=1552843369763" for 127.0.0.1 at 2019-03-17 12:23:00 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552843369763"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (8.3ms)
+  Rendered events/_new.html.haml (35.0ms)
+  Rendered events/new.js.haml (59.9ms)
+Completed 200 OK in 119ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 12:23:07 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"aa", "date_range"=>"03/16/2019 - 03/17/2019", "start"=>"2019-03-16 00:00", "end"=>"2019-03-17 00:00", "color"=>"red"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("title", "start", "end", "color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "aa"], ["start", "2019-03-16 00:00:00"], ["end", "2019-03-17 00:00:00"], ["color", "red"], ["created_at", "2019-03-17 17:23:07.111955"], ["updated_at", "2019-03-17 17:23:07.111955"]]
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (1.4ms)
+  Rendered events/create.js.haml (29.6ms)
+Completed 200 OK in 94ms (Views: 63.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 12:23:13 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (93.0ms)
+Completed 200 OK in 145ms (Views: 139.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552843393493" for 127.0.0.1 at 2019-03-17 12:23:13 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552843393493"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.4ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552843393494" for 127.0.0.1 at 2019-03-17 12:23:16 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552843393494"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (8.6ms)
+  Rendered events/_new.html.haml (34.7ms)
+  Rendered events/new.js.haml (59.6ms)
+Completed 200 OK in 121ms (Views: 90.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:23:22 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.4ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 115ms (Views: 109.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:23:22 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 107ms (Views: 103.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:23:22 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (5.1ms)
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:23:22 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 180ms (Views: 176.6ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 180ms (Views: 174.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552843402856" for 127.0.0.1 at 2019-03-17 12:23:22 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552843402856"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.5ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 12:23:23 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (83.4ms)
+Completed 200 OK in 131ms (Views: 127.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 12:23:23 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (98.0ms)
+Completed 200 OK in 152ms (Views: 148.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552843403702" for 127.0.0.1 at 2019-03-17 12:23:23 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552843403702"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (3.4ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-03-31&end=2019-05-12&_=1552843403703" for 127.0.0.1 at 2019-03-17 12:23:24 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-03-31", "end"=>"2019-05-12", "_"=>"1552843403703"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-03-31 00:00:00"], ["start", "2019-05-12 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (1.1ms)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552843403704" for 127.0.0.1 at 2019-03-17 12:23:26 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552843403704"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.3ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:23:37 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 104ms (Views: 98.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:23:37 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.3ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 105ms (Views: 101.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:23:37 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (6.2ms)
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:23:37 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 169ms (Views: 162.8ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 211ms (Views: 207.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552843417784" for 127.0.0.1 at 2019-03-17 12:23:37 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552843417784"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.8ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to FixColumnName (20190317174136)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317174136_fix_column_name.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevents" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "driver_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317174136_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevents" ("id","title","start","end","driver_id","created_at","updated_at")
+                     SELECT "id","title","start","end","color","created_at","updated_at" FROM "events"[0m
+  ↳ db/migrate/20190317174136_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "events"[0m
+  ↳ db/migrate/20190317174136_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "driver_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317174136_fix_column_name.rb:3
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "events" ("id","title","start","end","driver_id","created_at","updated_at")
+                     SELECT "id","title","start","end","driver_id","created_at","updated_at" FROM "aevents"[0m
+  ↳ db/migrate/20190317174136_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevents"[0m
+  ↳ db/migrate/20190317174136_fix_column_name.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190317174136"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:45:48 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 439ms (Views: 419.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552844749316" for 127.0.0.1 at 2019-03-17 12:45:49 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552844749316"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (11.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8bdecaa910>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1349624040443376460_70119320656060'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1349624040443376460_70119320656060'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 12:45:51 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (93.0ms)
+Completed 200 OK in 140ms (Views: 135.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 12:45:51 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (110.7ms)
+Completed 200 OK in 162ms (Views: 157.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552844751463" for 127.0.0.1 at 2019-03-17 12:45:51 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552844751463"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.3ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be18e98f0>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1349624040443376460_70119380763500'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1349624040443376460_70119380763500'
+Started GET "/events/new?_=1552844751464" for 127.0.0.1 at 2019-03-17 12:45:53 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844751464"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (122.5ms)
+  Rendered events/_new.html.haml (147.0ms)
+  Rendered events/new.js.haml (170.1ms)
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8bda5ea778>):
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+  
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119319637260'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119319637260'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119320082360'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119320389720'
+Started GET "/events/new?_=1552844751465" for 127.0.0.1 at 2019-03-17 12:45:54 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844751465"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (30.9ms)
+  Rendered events/_new.html.haml (54.3ms)
+Started GET "/events/new?_=1552844751466" for 127.0.0.1 at 2019-03-17 12:45:55 -0500
+  Rendered events/new.js.haml (77.8ms)
+Processing by EventsController#new as JS
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms)
+
+
+  Parameters: {"_"=>"1552844751466"}
+  
+  Rendering events/new.js.haml
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be2a1afe8>):
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+  
+  Rendered events/_form.html.haml (29.8ms)
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119358461040'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119358461040'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119375611940'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119389710240'
+  Rendered events/_new.html.haml (53.6ms)
+  Rendered events/new.js.haml (195.7ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be1b5be08>):
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+  
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119390175260'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119390175260'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119390034480'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119381978920'
+Started GET "/events/new?_=1552844751467" for 127.0.0.1 at 2019-03-17 12:45:55 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844751467"}
+Started GET "/events/new?_=1552844751468" for 127.0.0.1 at 2019-03-17 12:45:55 -0500
+  Rendering events/new.js.haml
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844751468"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (54.0ms)
+Started GET "/events/new?_=1552844751469" for 127.0.0.1 at 2019-03-17 12:45:55 -0500
+  Rendered events/_new.html.haml (130.6ms)
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844751469"}
+  Rendered events/new.js.haml (203.7ms)
+  Rendered events/_form.html.haml (28.9ms)
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 0.0ms)
+
+
+  Rendering events/new.js.haml
+  Rendered events/_new.html.haml (99.6ms)
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be24f5478>):
+  Rendered events/_form.html.haml (30.6ms)
+  Rendered events/new.js.haml (206.9ms)
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+  Rendered events/_new.html.haml (54.4ms)
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 0.0ms)
+
+
+  
+  Rendered events/new.js.haml (76.5ms)
+  
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119386588560'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119386588560'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119386818120'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119387003400'
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms)
+
+
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be2436348>):
+  
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8bdef5ff20>):
+  
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119386588560'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119386588560'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119386818120'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119386620400'
+  
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119358588560'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119358588560'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119358758820'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119358918580'
+Started GET "/events/new?_=1552844751470" for 127.0.0.1 at 2019-03-17 12:45:56 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844751470"}
+  Rendering events/new.js.haml
+Started GET "/events/new?_=1552844751471" for 127.0.0.1 at 2019-03-17 12:45:56 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844751471"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (88.3ms)
+  Rendered events/_new.html.haml (159.5ms)
+  Rendered events/_form.html.haml (32.0ms)
+  Rendered events/new.js.haml (220.6ms)
+  Rendered events/_new.html.haml (60.5ms)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.0ms)
+
+
+  Rendered events/new.js.haml (84.9ms)
+  
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.0ms)
+
+
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be2938670>):
+  
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be1a12ec0>):
+  
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119357119700'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119357119700'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119388854160'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119389139820'
+  
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119316720700'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119316720700'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119357373540'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119381272020'
+Started GET "/events/new?_=1552844751473" for 127.0.0.1 at 2019-03-17 12:45:57 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844751473"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (77.5ms)
+  Rendered events/_new.html.haml (103.5ms)
+  Rendered events/new.js.haml (174.2ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be241c150>):
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+  
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119374095160'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119374095160'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119386510180'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119374585040'
+Started GET "/events/new?_=1552844751472" for 127.0.0.1 at 2019-03-17 12:45:57 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844751472"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (32.5ms)
+  Rendered events/_new.html.haml (57.2ms)
+  Rendered events/new.js.haml (93.7ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be09cab08>):
+    4:     = f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" }
+    5:     = f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden'
+    6:     = f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden'
+    7:     = f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']]
+    8:   .form-actions
+    9:     = f.button :submit
+   10:     = link_to 'Delete',                      |
+  
+app/views/events/_form.html.haml:7:in `block in _app_views_events__form_html_haml___3371088896954552103_70119371933980'
+app/views/events/_form.html.haml:1:in `_app_views_events__form_html_haml___3371088896954552103_70119371933980'
+app/views/events/_new.html.haml:8:in `_app_views_events__new_html_haml__1717025008293602507_70119372363100'
+app/views/events/new.js.haml:1:in `_app_views_events_new_js_haml__370795706157676518_70119372670960'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 12:46:46 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (99.7ms)
+Completed 200 OK in 144ms (Views: 140.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552844806544" for 127.0.0.1 at 2019-03-17 12:46:46 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552844806544"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (5.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be2d55fc8>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1349624040443376460_70119391471060'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1349624040443376460_70119391471060'
+Started GET "/events/new?_=1552844806545" for 127.0.0.1 at 2019-03-17 12:46:47 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844806545"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (10.1ms)
+  Rendered events/_new.html.haml (34.2ms)
+  Rendered events/new.js.haml (57.2ms)
+Completed 200 OK in 118ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new?_=1552844806546" for 127.0.0.1 at 2019-03-17 12:47:30 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844806546"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (8.3ms)
+  Rendered events/_new.html.haml (31.5ms)
+  Rendered events/new.js.haml (54.2ms)
+Completed 200 OK in 112ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 12:47:36 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (92.7ms)
+Completed 200 OK in 148ms (Views: 143.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552844857129" for 127.0.0.1 at 2019-03-17 12:47:37 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552844857129"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be2555760>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1349624040443376460_70119397802160'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1349624040443376460_70119397802160'
+Started GET "/events/new?_=1552844857130" for 127.0.0.1 at 2019-03-17 12:47:39 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552844857130"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (9.0ms)
+  Rendered events/_new.html.haml (32.5ms)
+  Rendered events/new.js.haml (54.6ms)
+Completed 200 OK in 113ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:47:45 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 126ms (Views: 119.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:47:45 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.3ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 134ms (Views: 128.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:47:46 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (5.5ms)
+Started GET "/" for 127.0.0.1 at 2019-03-17 12:47:46 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 238ms (Views: 232.3ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 203ms (Views: 200.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552844866424" for 127.0.0.1 at 2019-03-17 12:47:46 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552844866424"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f8be1d532b0>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1349624040443376460_70119383078020'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1349624040443376460_70119383078020'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."driver_id" = ?[0m  [["driver_id", "928003907"]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."driver_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["driver_id", "928003907"], ["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2019-03-17 13:22:21 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.1ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 829ms (Views: 807.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:22:24 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 133ms (Views: 121.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:22:24 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 133ms (Views: 129.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:22:26 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (104.3ms)
+Completed 200 OK in 151ms (Views: 145.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:22:26 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (80.8ms)
+Completed 200 OK in 135ms (Views: 131.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:22:44 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (88.2ms)
+Completed 200 OK in 137ms (Views: 130.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552846964276" for 127.0.0.1 at 2019-03-17 13:22:44 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552846964276"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (12.2ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b1389808>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110400372840'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110400372840'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:24:00 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (274.5ms)
+Completed 200 OK in 318ms (Views: 314.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:24:37 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (94.1ms)
+Completed 200 OK in 151ms (Views: 145.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847077882" for 127.0.0.1 at 2019-03-17 13:24:37 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847077882"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b5a33240>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110422405100'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110422405100'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:25:01 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (297.5ms)
+Completed 200 OK in 344ms (Views: 338.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847101482" for 127.0.0.1 at 2019-03-17 13:25:01 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847101482"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b30da470>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110392412360'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110392412360'
+Started GET "/events/new?_=1552847101483" for 127.0.0.1 at 2019-03-17 13:25:02 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847101483"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (94.2ms)
+  Rendered events/_new.html.haml (116.5ms)
+  Rendered events/new.js.haml (137.2ms)
+Completed 200 OK in 194ms (Views: 167.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new?_=1552847101484" for 127.0.0.1 at 2019-03-17 13:25:05 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847101484"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (18.6ms)
+  Rendered events/_new.html.haml (42.1ms)
+  Rendered events/new.js.haml (68.9ms)
+Completed 200 OK in 125ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:26:30 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (309.8ms)
+Completed 200 OK in 355ms (Views: 350.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847191219" for 127.0.0.1 at 2019-03-17 13:26:31 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847191219"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b8d1f708>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110444324720'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110444324720'
+Started GET "/events/new?_=1552847191220" for 127.0.0.1 at 2019-03-17 13:26:31 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847191220"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (7.4ms)
+  Rendered events/_new.html.haml (29.2ms)
+  Rendered events/new.js.haml (50.7ms)
+Completed 200 OK in 107ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new?_=1552847191221" for 127.0.0.1 at 2019-03-17 13:26:43 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847191221"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (7.2ms)
+  Rendered events/_new.html.haml (30.2ms)
+  Rendered events/new.js.haml (51.6ms)
+Completed 200 OK in 107ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:26:45 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (265.2ms)
+Completed 200 OK in 313ms (Views: 306.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847205939" for 127.0.0.1 at 2019-03-17 13:26:45 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847205939"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b8d76dc8>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110449265460'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110449265460'
+Started GET "/events/new?_=1552847205940" for 127.0.0.1 at 2019-03-17 13:26:46 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847205940"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (7.9ms)
+  Rendered events/_new.html.haml (30.8ms)
+  Rendered events/new.js.haml (53.0ms)
+Completed 200 OK in 110ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new?_=1552847205941" for 127.0.0.1 at 2019-03-17 13:27:10 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847205941"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (7.9ms)
+  Rendered events/_new.html.haml (29.9ms)
+  Rendered events/new.js.haml (52.1ms)
+Completed 200 OK in 109ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new?_=1552847205942" for 127.0.0.1 at 2019-03-17 13:27:39 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847205942"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (8.3ms)
+  Rendered events/_new.html.haml (31.2ms)
+  Rendered events/new.js.haml (53.6ms)
+Completed 200 OK in 110ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:27:39 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (259.4ms)
+Completed 200 OK in 302ms (Views: 299.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847260402" for 127.0.0.1 at 2019-03-17 13:27:40 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847260402"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b841a568>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110449024100'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110449024100'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:29:06 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (271.1ms)
+Completed 200 OK in 316ms (Views: 312.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847347098" for 127.0.0.1 at 2019-03-17 13:29:07 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847347098"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b5ec3198>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110370655540'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110370655540'
+Started GET "/events/new?_=1552847347099" for 127.0.0.1 at 2019-03-17 13:29:07 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847347099"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (9.1ms)
+  Rendered events/_new.html.haml (33.8ms)
+  Rendered events/new.js.haml (56.1ms)
+Completed 200 OK in 110ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new?_=1552847347100" for 127.0.0.1 at 2019-03-17 13:29:12 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847347100"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (7.4ms)
+  Rendered events/_new.html.haml (31.7ms)
+  Rendered events/new.js.haml (54.1ms)
+Completed 200 OK in 114ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new?_=1552847347101" for 127.0.0.1 at 2019-03-17 13:29:17 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847347101"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (8.3ms)
+  Rendered events/_new.html.haml (31.3ms)
+  Rendered events/new.js.haml (52.7ms)
+Completed 200 OK in 109ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:29:22 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"asdf", "date_range"=>"03/06/2019 - 03/06/2019", "start"=>"2019-03-06 09:00", "end"=>"2019-03-06 09:30", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (27.7ms)
+  Rendered events/create.js.haml (52.9ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87af76e718>):
+     5: json.start event.start.strftime(date_format)
+     6: json.end event.end.strftime(date_format)
+     7: 
+     8: json.color event.color unless event.color.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+  
+app/views/events/_event.json.jbuilder:8:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110379321600'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110373250480'
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:29:34 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"asdf", "date_range"=>"03/06/2019 - 03/06/2019", "start"=>"2019-03-06 00:00", "end"=>"2019-03-06 12:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (25.8ms)
+  Rendered events/create.js.haml (49.1ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b8559410>):
+     5: json.start event.start.strftime(date_format)
+     6: json.end event.end.strftime(date_format)
+     7: 
+     8: json.color event.color unless event.color.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+  
+app/views/events/_event.json.jbuilder:8:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110444798120'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110444904320'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:29:37 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (94.1ms)
+Completed 200 OK in 147ms (Views: 143.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847377292" for 127.0.0.1 at 2019-03-17 13:29:37 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847377292"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (5.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b8621ed8>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110442120760'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110442120760'
+Started GET "/events/new?_=1552847377293" for 127.0.0.1 at 2019-03-17 13:29:39 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847377293"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (8.1ms)
+  Rendered events/_new.html.haml (33.0ms)
+  Rendered events/new.js.haml (57.6ms)
+Completed 200 OK in 114ms (Views: 88.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:29:43 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.3ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 118ms (Views: 112.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:29:43 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.3ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 127ms (Views: 122.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:29:43 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (5.1ms)
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:29:43 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 207ms (Views: 202.4ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 192ms (Views: 189.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:29:45 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (77.3ms)
+Completed 200 OK in 124ms (Views: 119.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:29:45 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (82.7ms)
+Completed 200 OK in 136ms (Views: 133.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847385937" for 127.0.0.1 at 2019-03-17 13:29:45 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847385937"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (5.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87ba009968>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110445426040'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110445426040'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:29:46 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (89.8ms)
+Completed 200 OK in 145ms (Views: 141.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847386850" for 127.0.0.1 at 2019-03-17 13:29:46 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847386850"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (7.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b8ece978>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110449991600'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110449991600'
+Started GET "/events/new?_=1552847386851" for 127.0.0.1 at 2019-03-17 13:29:47 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847386851"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (7.3ms)
+  Rendered events/_new.html.haml (32.1ms)
+  Rendered events/new.js.haml (56.8ms)
+Completed 200 OK in 114ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:30:16 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"test", "date_range"=>"03/17/2019 - 03/20/2019", "start"=>"2019-03-17 00:00", "end"=>"2019-03-20 00:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (26.1ms)
+  Rendered events/create.js.haml (49.5ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b5d82a90>):
+     5: json.start event.start.strftime(date_format)
+     6: json.end event.end.strftime(date_format)
+     7: 
+     8: json.color event.color unless event.color.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+  
+app/views/events/_event.json.jbuilder:8:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110449100700'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110424025800'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:30:17 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (88.5ms)
+Completed 200 OK in 133ms (Views: 128.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847418057" for 127.0.0.1 at 2019-03-17 13:30:18 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847418057"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b5e5a418>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110424583540'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110424583540'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:30:26 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (250.8ms)
+Completed 200 OK in 302ms (Views: 295.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847427044" for 127.0.0.1 at 2019-03-17 13:30:27 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847427044"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b5abfe98>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110423993960'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110423993960'
+Started GET "/events/new?_=1552847427045" for 127.0.0.1 at 2019-03-17 13:30:27 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847427045"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (8.7ms)
+  Rendered events/_new.html.haml (31.8ms)
+  Rendered events/new.js.haml (54.1ms)
+Completed 200 OK in 111ms (Views: 84.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:30:33 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"", "date_range"=>"03/12/2019 - 03/13/2019", "start"=>"2019-03-12 00:00", "end"=>"2019-03-13 00:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (26.4ms)
+  Rendered events/create.js.haml (49.8ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b79d2d08>):
+     5: json.start event.start.strftime(date_format)
+     6: json.end event.end.strftime(date_format)
+     7: 
+     8: json.color event.color unless event.color.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+  
+app/views/events/_event.json.jbuilder:8:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110379556720'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110438473820'
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:30:35 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"test", "date_range"=>"03/12/2019 - 03/13/2019", "start"=>"2019-03-12 00:00", "end"=>"2019-03-13 00:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (26.6ms)
+  Rendered events/create.js.haml (49.3ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b8480598>):
+     5: json.start event.start.strftime(date_format)
+     6: json.end event.end.strftime(date_format)
+     7: 
+     8: json.color event.color unless event.color.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+  
+app/views/events/_event.json.jbuilder:8:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110441189180'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110420604920'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:30:37 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (90.4ms)
+Completed 200 OK in 135ms (Views: 131.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847437856" for 127.0.0.1 at 2019-03-17 13:30:37 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847437856"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (6.3ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b7e2d6f0>):
+    4:   json.title event.title
+    5:   json.start event.start.strftime(date_format)
+    6:   json.end event.end.strftime(date_format)
+    7:   json.driver_id event.driver_id unless event.color.blank?
+    8:   json.allDay event.all_day_event? ? true : false
+    9:   json.update_url event_path(event, method: :patch)
+   10:   json.edit_url edit_event_path(event)
+  
+app/views/events/index.json.jbuilder:7:in `block in _app_views_events_index_json_jbuilder__1125864325453434466_70110441270000'
+app/views/events/index.json.jbuilder:1:in `_app_views_events_index_json_jbuilder__1125864325453434466_70110441270000'
+Started GET "/events/new?_=1552847437857" for 127.0.0.1 at 2019-03-17 13:31:19 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847437857"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (8.1ms)
+  Rendered events/_new.html.haml (31.1ms)
+  Rendered events/new.js.haml (52.7ms)
+Completed 200 OK in 110ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:31:20 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (93.8ms)
+Completed 200 OK in 141ms (Views: 136.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847480573" for 127.0.0.1 at 2019-03-17 13:31:20 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847480573"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (10.9ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/new?_=1552847480574" for 127.0.0.1 at 2019-03-17 13:31:21 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847480574"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (9.8ms)
+  Rendered events/_new.html.haml (34.6ms)
+  Rendered events/new.js.haml (58.0ms)
+Completed 200 OK in 113ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:31:22 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 114ms (Views: 107.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:31:22 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 113ms (Views: 109.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:31:22 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (3.3ms)
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:31:22 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (11.1ms)
+Completed 200 OK in 200ms (Views: 197.1ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 184ms (Views: 161.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:31:23 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (81.4ms)
+Completed 200 OK in 132ms (Views: 127.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:31:24 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (88.9ms)
+Completed 200 OK in 136ms (Views: 132.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847484283" for 127.0.0.1 at 2019-03-17 13:31:24 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847484283"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.5ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552847484284" for 127.0.0.1 at 2019-03-17 13:31:26 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847484284"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (8.1ms)
+  Rendered events/_new.html.haml (35.1ms)
+  Rendered events/new.js.haml (58.0ms)
+Completed 200 OK in 113ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:31:54 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"test", "date_range"=>"03/12/2019 - 03/12/2019", "start"=>"2019-03-12 00:00", "end"=>"2019-03-12 19:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (28.2ms)
+  Rendered events/create.js.haml (51.3ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for #<Event:0x007f87b5cc9608>):
+     5: json.start event.start.strftime(date_format)
+     6: json.end event.end.strftime(date_format)
+     7: 
+     8: json.color event.color unless event.color.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+  
+app/views/events/_event.json.jbuilder:8:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110423472940'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110423614960'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:33:05 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (91.2ms)
+Completed 200 OK in 144ms (Views: 139.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847586112" for 127.0.0.1 at 2019-03-17 13:33:06 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847586112"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.4ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552847586113" for 127.0.0.1 at 2019-03-17 13:33:06 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847586113"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (10.1ms)
+  Rendered events/_new.html.haml (37.0ms)
+  Rendered events/new.js.haml (59.8ms)
+Completed 200 OK in 115ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:33:09 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"", "date_range"=>"03/12/2019 - 03/13/2019", "start"=>"2019-03-12 00:00", "end"=>"2019-03-13 00:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (24.4ms)
+  Rendered events/create.js.haml (48.1ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"events", :id=>#<Event id: nil, title: "", start: "2019-03-12 00:00:00", end: "2019-03-13 00:00:00", driver_id: "black", created_at: nil, updated_at: nil>, :method=>:patch}, possible unmatched constraints: [:id]):
+     8: json.driver_id event.driver_id unless event.driver_id.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+    12: json.edit_url edit_event_path(event)
+  
+app/views/events/_event.json.jbuilder:11:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110420155240'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110438211940'
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:33:11 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"test", "date_range"=>"03/12/2019 - 03/13/2019", "start"=>"2019-03-12 00:00", "end"=>"2019-03-13 00:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (24.5ms)
+  Rendered events/create.js.haml (49.2ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"events", :id=>#<Event id: nil, title: "test", start: "2019-03-12 00:00:00", end: "2019-03-13 00:00:00", driver_id: "black", created_at: nil, updated_at: nil>, :method=>:patch}, possible unmatched constraints: [:id]):
+     8: json.driver_id event.driver_id unless event.driver_id.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+    12: json.edit_url edit_event_path(event)
+  
+app/views/events/_event.json.jbuilder:11:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110424254700'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110424370920'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:38:36 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (94.8ms)
+Completed 200 OK in 147ms (Views: 142.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847917039" for 127.0.0.1 at 2019-03-17 13:38:37 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847917039"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.4ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552847917040" for 127.0.0.1 at 2019-03-17 13:38:38 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847917040"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (11.4ms)
+  Rendered events/_new.html.haml (37.7ms)
+  Rendered events/new.js.haml (59.7ms)
+Completed 200 OK in 116ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:38:42 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"asdf", "date_range"=>"03/13/2019 - 03/14/2019", "start"=>"2019-03-13 00:00", "end"=>"2019-03-14 00:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (23.8ms)
+  Rendered events/create.js.haml (48.5ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"events", :id=>#<Event id: nil, title: "asdf", start: "2019-03-13 00:00:00", end: "2019-03-14 00:00:00", driver_id: "black", created_at: nil, updated_at: nil>, :method=>:patch}, possible unmatched constraints: [:id]):
+     8: json.driver_id event.driver_id unless event.driver_id.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+    12: json.edit_url edit_event_path(event)
+  
+app/views/events/_event.json.jbuilder:11:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110423085680'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110423261200'
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:38:51 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"asdf", "date_range"=>"03/13/2019 - 03/14/2019", "start"=>"2019-03-13 00:00", "end"=>"2019-03-14 00:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (23.7ms)
+  Rendered events/create.js.haml (47.3ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"events", :id=>#<Event id: nil, title: "asdf", start: "2019-03-13 00:00:00", end: "2019-03-14 00:00:00", driver_id: "black", created_at: nil, updated_at: nil>, :method=>:patch}, possible unmatched constraints: [:id]):
+     8: json.driver_id event.driver_id unless event.driver_id.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+    12: json.edit_url edit_event_path(event)
+  
+app/views/events/_event.json.jbuilder:11:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110445029820'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110424875260'
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:39:02 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"asdf", "date_range"=>"03/13/2019 - 03/14/2019", "start"=>"2019-03-13 00:00", "end"=>"2019-03-14 00:00", "driver_id"=>"black"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (26.9ms)
+  Rendered events/create.js.haml (50.9ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"events", :id=>#<Event id: nil, title: "asdf", start: "2019-03-13 00:00:00", end: "2019-03-14 00:00:00", driver_id: "black", created_at: nil, updated_at: nil>, :method=>:patch}, possible unmatched constraints: [:id]):
+     8: json.driver_id event.driver_id unless event.driver_id.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+    12: json.edit_url edit_event_path(event)
+  
+app/views/events/_event.json.jbuilder:11:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110447569080'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110447750660'
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:39:07 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (88.3ms)
+Completed 200 OK in 146ms (Views: 142.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847947919" for 127.0.0.1 at 2019-03-17 13:39:07 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847947919"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.9ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552847947920" for 127.0.0.1 at 2019-03-17 13:39:08 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847947920"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (9.5ms)
+  Rendered events/_new.html.haml (38.0ms)
+  Rendered events/new.js.haml (59.7ms)
+Completed 200 OK in 115ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:39:11 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"d", "date_range"=>"03/12/2019 - 03/13/2019", "start"=>"2019-03-12 00:00", "end"=>"2019-03-13 00:00", "driver_id"=>"928003907"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (30.9ms)
+  Rendered events/create.js.haml (54.4ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"events", :id=>#<Event id: nil, title: "d", start: "2019-03-12 00:00:00", end: "2019-03-13 00:00:00", driver_id: "928003907", created_at: nil, updated_at: nil>, :method=>:patch}, possible unmatched constraints: [:id]):
+     8: json.driver_id event.driver_id unless event.driver_id.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+    12: json.edit_url edit_event_path(event)
+  
+app/views/events/_event.json.jbuilder:11:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110445360460'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110445438580'
+Started GET "/drivers" for 127.0.0.1 at 2019-03-17 13:39:26 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 135ms (Views: 128.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-17 13:39:27 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 130ms (Views: 125.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-17 13:39:29 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 135ms (Views: 126.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-17 13:39:30 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 111ms (Views: 106.1ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/drivers/8" for 127.0.0.1 at 2019-03-17 13:39:38 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7LpZ0g2XY3Hlqxl8rFkibqws3Yq68HSuLU5v/ABIPZbnuK4HFdHO+Oa3Pe+Hf4GsMPfi+K9zZrnCn6gylbk2jw==", "driver"=>{"name"=>"Test", "isAvailable"=>"true", "Email"=>"aaa@tamu", "UIN"=>"928003907"}, "commit"=>"Update Driver Info", "id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[36mDriver Update (0.5ms)[0m  [1m[33mUPDATE "drivers" SET "UIN" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["UIN", "928003907"], ["updated_at", "2019-03-17 18:39:38.479322"], ["id", 8]]
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-17 13:39:38 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 126ms (Views: 120.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:39:40 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 120ms (Views: 114.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2019-03-17 13:39:40 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering requests/index.html.haml within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/requests/index.html.haml:18
+  Rendered requests/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 105ms (Views: 100.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:39:41 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (87.9ms)
+Completed 200 OK in 137ms (Views: 131.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 13:39:41 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (87.2ms)
+Completed 200 OK in 141ms (Views: 138.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552847981432" for 127.0.0.1 at 2019-03-17 13:39:41 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552847981432"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.3ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552847981433" for 127.0.0.1 at 2019-03-17 13:39:42 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552847981433"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (10.4ms)
+  Rendered events/_new.html.haml (37.3ms)
+  Rendered events/new.js.haml (60.1ms)
+Completed 200 OK in 116ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 13:39:46 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"123", "date_range"=>"03/14/2019 - 03/15/2019", "start"=>"2019-03-14 00:00", "end"=>"2019-03-15 00:00", "driver_id"=>"928003907"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (24.6ms)
+  Rendered events/create.js.haml (47.2ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"events", :id=>#<Event id: nil, title: "123", start: "2019-03-14 00:00:00", end: "2019-03-15 00:00:00", driver_id: "928003907", created_at: nil, updated_at: nil>, :method=>:patch}, possible unmatched constraints: [:id]):
+     8: json.driver_id event.driver_id unless event.driver_id.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+    12: json.edit_url edit_event_path(event)
+  
+app/views/events/_event.json.jbuilder:11:in `_app_views_events__event_json_jbuilder___3244199644272526332_70110424780020'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__524853889900650997_70110424913560'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."driver_id" = ?[0m  [["driver_id", "928003907"]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."driver_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["driver_id", "928003907"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to FixColumnName (20190317184932)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317184932_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevents" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "UIN" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317184932_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevents" ("id","title","start","end","UIN","created_at","updated_at")
+                     SELECT "id","title","start","end","driver_id","created_at","updated_at" FROM "events"[0m
+  ↳ db/migrate/20190317184932_fix_column_name.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "events"[0m
+  ↳ db/migrate/20190317184932_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "UIN" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317184932_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "events" ("id","title","start","end","UIN","created_at","updated_at")
+                     SELECT "id","title","start","end","UIN","created_at","updated_at" FROM "aevents"[0m
+  ↳ db/migrate/20190317184932_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevents"[0m
+  ↳ db/migrate/20190317184932_fix_column_name.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190317184932"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."UIN" = ?[0m  [["UIN", "928003907"]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."UIN" = ? AND "events"."id" = ? LIMIT ?[0m  [["UIN", "928003907"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."UIN" = ? AND "events"."id" = ? LIMIT ?[0m  [["UIN", "928003907"], ["id", 0], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."UIN" = ? LIMIT ?[0m  [["UIN", "black"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to FixColumnName (20190317191506)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317191506_fix_column_name.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevents" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "driver_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317191506_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevents" ("id","title","start","end","driver_id","created_at","updated_at")
+                     SELECT "id","title","start","end","UIN","created_at","updated_at" FROM "events"[0m
+  ↳ db/migrate/20190317191506_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "events"[0m
+  ↳ db/migrate/20190317191506_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "driver_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317191506_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "events" ("id","title","start","end","driver_id","created_at","updated_at")
+                     SELECT "id","title","start","end","driver_id","created_at","updated_at" FROM "aevents"[0m
+  ↳ db/migrate/20190317191506_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevents"[0m
+  ↳ db/migrate/20190317191506_fix_column_name.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190317191506"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."driver_id" = ?[0m  [["driver_id", "5"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."driver_id" = ?[0m  [["driver_id", "5"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."driver_id" = ?[0m  [["driver_id", "5"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to FixColumnName (20190317192627)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adrivers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar DEFAULT NULL, "UIN" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "adrivers" ("id","name","isAvailable","created_at","updated_at","Email","UIN")
+                     SELECT "id","name","isAvailable","created_at","updated_at","Email","UIN" FROM "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to FixColumnName (20190317192627)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adrivers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar DEFAULT NULL, "UIN" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "adrivers" ("id","name","isAvailable","created_at","updated_at","Email","UIN")
+                     SELECT "id","name","isAvailable","created_at","updated_at","Email","UIN" FROM "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to FixColumnName (20190317192627)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adrivers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar DEFAULT NULL, "UIN" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "adrivers" ("id","name","isAvailable","created_at","updated_at","Email","UIN")
+                     SELECT "id","name","isAvailable","created_at","updated_at","Email","UIN" FROM "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to FixColumnName (20190317192627)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adrivers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar DEFAULT NULL, "UIN" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "adrivers" ("id","name","isAvailable","created_at","updated_at","Email","UIN")
+                     SELECT "id","name","isAvailable","created_at","updated_at","Email","UIN" FROM "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to FixColumnName (20190317192627)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adrivers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar DEFAULT NULL, "UIN" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "adrivers" ("id","name","isAvailable","created_at","updated_at","Email","UIN")
+                     SELECT "id","name","isAvailable","created_at","updated_at","Email","UIN" FROM "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "drivers"[0m
+  ↳ db/migrate/20190317192627_fix_column_name.rb:3
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to ChangePhoneToBeStringInCustomers (20190317192934)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adrivers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar DEFAULT NULL, "UIN" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "adrivers" ("id","name","isAvailable","created_at","updated_at","Email","UIN")
+                     SELECT "id","name","isAvailable","created_at","updated_at","Email","UIN" FROM "drivers"[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "drivers"[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to ChangePhoneToBeStringInCustomers (20190317192934)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adrivers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar DEFAULT NULL, "UIN" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "adrivers" ("id","name","isAvailable","created_at","updated_at","Email","UIN")
+                     SELECT "id","name","isAvailable","created_at","updated_at","Email","UIN" FROM "drivers"[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "drivers"[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to ChangePhoneToBeStringInCustomers (20190317192934)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adrivers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar DEFAULT NULL, "UIN" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "adrivers" ("id","name","isAvailable","created_at","updated_at","Email","UIN")
+                     SELECT "id","name","isAvailable","created_at","updated_at","Email","UIN" FROM "drivers"[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "drivers"[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar DEFAULT NULL, "UIN" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "drivers" ("id","name","isAvailable","created_at","updated_at","Email","UIN")
+                     SELECT "id","name","isAvailable","created_at","updated_at","Email","UIN" FROM "adrivers"[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "adrivers"[0m
+  ↳ db/migrate/20190317192934_change_phone_to_be_string_in_customers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190317192934"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to ChangeTypeInt (20190317193702)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevents" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "driver_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevents" ("id","title","start","end","driver_id","created_at","updated_at")
+                     SELECT "id","title","start","end","driver_id","created_at","updated_at" FROM "events"[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "events"[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to ChangeTypeInt (20190317193702)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevents" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "driver_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevents" ("id","title","start","end","driver_id","created_at","updated_at")
+                     SELECT "id","title","start","end","driver_id","created_at","updated_at" FROM "events"[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "events"[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "events" ("id","title","start","end","created_at","updated_at")
+                     SELECT "id","title","start","end","created_at","updated_at" FROM "aevents"[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevents"[0m
+  ↳ db/migrate/20190317193702_change_type_int.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190317193702"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to AddTypeInt (20190317193758)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to AddTypeInt (20190317193758)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "events" ADD "driver_id" integer[0m
+  ↳ db/migrate/20190317193758_add_type_int.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190317193758"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."driver_id" = ?[0m  [["driver_id", 10]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."driver_id" = ?[0m  [["driver_id", 10]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.7ms)[0m  [1m[32mINSERT INTO "drivers" ("id", "name", "created_at", "updated_at", "UIN") VALUES (?, ?, ?, ?, ?)[0m  [["id", 10], ["name", "Leon"], ["created_at", "2019-03-17 19:42:28.919529"], ["updated_at", "2019-03-17 19:42:28.919529"], ["UIN", "928003907"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "created_at", "updated_at", "driver_id") VALUES (?, ?, ?, ?)[0m  [["title", "test"], ["created_at", "2019-03-17 19:42:41.915576"], ["updated_at", "2019-03-17 19:42:41.915576"], ["driver_id", 10]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to AddUserToUploads (20190317194624)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "events" ADD "driver_id" integer[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to AddUserToUploads (20190317194624)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevents" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "driver_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevents" ("id","title","start","end","created_at","updated_at","driver_id")
+                     SELECT "id","title","start","end","created_at","updated_at","driver_id" FROM "events"[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "events"[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "start" datetime DEFAULT NULL, "end" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:3
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "events" ("id","title","start","end","created_at","updated_at")
+                     SELECT "id","title","start","end","created_at","updated_at" FROM "aevents"[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevents"[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "events" ADD "driver_id" integer[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_events_on_driver_id" ON "events" ("driver_id")[0m
+  ↳ db/migrate/20190317194624_add_user_to_uploads.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190317194624"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."driver_id" = ?[0m  [["driver_id", 10]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (1.2ms)[0m  [1m[32mINSERT INTO "drivers" ("id", "name", "created_at", "updated_at", "UIN") VALUES (?, ?, ?, ?, ?)[0m  [["id", 10], ["name", "Leon"], ["created_at", "2019-03-17 19:47:58.804604"], ["updated_at", "2019-03-17 19:47:58.804604"], ["UIN", "928003907"]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."driver_id" = ?[0m  [["driver_id", 15]]
+  [1m[36mDriver Load (0.5ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" ORDER BY "drivers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE (driver_id=15) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE (driver_id=15) ORDER BY "events"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE (driver_id=10) ORDER BY "events"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "driver_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 10], ["title", "fuck"], ["created_at", "2019-03-17 19:54:58.443048"], ["updated_at", "2019-03-17 19:54:58.443048"], ["driver_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE (driver_id=8) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."driver_id" = ? LIMIT ?[0m  [["driver_id", 8], ["LIMIT", 11]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."driver_id" = ? ORDER BY "events"."id" ASC LIMIT ?[0m  [["driver_id", 8], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2019-03-17 14:56:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.4ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:23
+  Rendered onduties/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 914ms (Views: 893.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552852614789" for 127.0.0.1 at 2019-03-17 14:56:55 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552852614789"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (7.9ms)
+Completed 200 OK in 29ms (Views: 21.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 14:56:57 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (104.7ms)
+Completed 200 OK in 153ms (Views: 148.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 14:56:57 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (85.8ms)
+Completed 200 OK in 140ms (Views: 135.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552852617796" for 127.0.0.1 at 2019-03-17 14:56:57 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552852617796"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.3ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552852617797" for 127.0.0.1 at 2019-03-17 14:56:58 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552852617797"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (93.9ms)
+  Rendered events/_new.html.haml (118.0ms)
+  Rendered events/new.js.haml (140.0ms)
+Completed 200 OK in 194ms (Views: 170.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 14:57:02 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"123", "date_range"=>"03/06/2019 - 03/07/2019", "start"=>"2019-03-06 00:00", "end"=>"2019-03-07 00:00", "driver_id"=>"928003907"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 928003907], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (24.7ms)
+  Rendered events/create.js.haml (48.3ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"events", :id=>#<Event id: nil, title: "123", start: "2019-03-06 00:00:00", end: "2019-03-07 00:00:00", created_at: nil, updated_at: nil, driver_id: 928003907>, :method=>:patch}, possible unmatched constraints: [:id]):
+     8: json.driver_id event.driver_id unless event.driver_id.blank?
+     9: json.allDay event.all_day_event? ? true : false
+    10: 
+    11: json.update_url event_path(event, method: :patch)
+    12: json.edit_url edit_event_path(event)
+  
+app/views/events/_event.json.jbuilder:11:in `_app_views_events__event_json_jbuilder__4130305188010576221_70200444275260'
+app/views/events/create.js.haml:3:in `_app_views_events_create_js_haml__2437770899719921673_70200444555100'
+Started GET "/vehicles" for 127.0.0.1 at 2019-03-17 14:57:38 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.haml:13
+  Rendered vehicles/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 103ms (Views: 93.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2019-03-17 14:57:38 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.haml:13
+  Rendered vehicles/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 103ms (Views: 99.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-17 14:57:39 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 113ms (Views: 107.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-17 14:57:39 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 99ms (Views: 94.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/drivers/10" for 127.0.0.1 at 2019-03-17 14:57:42 -0500
+Processing by DriversController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KKlv3HOoVSTHPy/DCO4aMAjUg+hCcOgis0FMRpBwtpQjq5gJa+74rcQjC1AjyLnylA+8mlfz+jVckIuIBYG9jQ==", "id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:42
+  [1m[36mDriver Destroy (0.7ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/drivers_controller.rb:42
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:42
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-17 14:57:42 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 103ms (Views: 99.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-17 14:57:44 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 127ms (Views: 120.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-17 14:57:44 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 101ms (Views: 96.7ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/drivers/8" for 127.0.0.1 at 2019-03-17 14:57:49 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oSlcX7cAe2h5E+GygtH/YWx/8ll3emFRKalfIXU4ntuqK6uKr0bW4XoPxSGp91yj8KTNK2L5c0bGeJjv4MmVwg==", "driver"=>{"name"=>"Test", "isAvailable"=>"true", "Email"=>"aaa@tamu", "UIN"=>"1"}, "commit"=>"Update Driver Info", "id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[36mDriver Update (0.6ms)[0m  [1m[33mUPDATE "drivers" SET "UIN" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["UIN", "1"], ["updated_at", "2019-03-17 19:57:49.255829"], ["id", 8]]
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-17 14:57:49 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 113ms (Views: 108.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 14:58:26 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (84.3ms)
+Completed 200 OK in 131ms (Views: 125.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 14:58:26 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (81.0ms)
+Completed 200 OK in 128ms (Views: 123.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552852706672" for 127.0.0.1 at 2019-03-17 14:58:26 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552852706672"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (3.0ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new?_=1552852706673" for 127.0.0.1 at 2019-03-17 14:58:27 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1552852706673"}
+  Rendering events/new.js.haml
+  Rendered events/_form.html.haml (9.7ms)
+  Rendered events/_new.html.haml (41.4ms)
+  Rendered events/new.js.haml (63.7ms)
+Completed 200 OK in 126ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-03-17 14:58:34 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"123", "date_range"=>"03/05/2019 - 03/06/2019", "start"=>"2019-03-05 00:00", "end"=>"2019-03-06 00:00", "driver_id"=>"8"}, "commit"=>"Create Event"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:20
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "start", "end", "created_at", "updated_at", "driver_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["start", "2019-03-05 00:00:00"], ["end", "2019-03-06 00:00:00"], ["created_at", "2019-03-17 19:58:34.573594"], ["updated_at", "2019-03-17 19:58:34.573594"], ["driver_id", 8]]
+  ↳ app/controllers/events_controller.rb:20
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:20
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (1.0ms)
+  Rendered events/create.js.haml (24.4ms)
+Completed 200 OK in 87ms (Views: 57.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 14:59:10 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (84.1ms)
+Completed 200 OK in 132ms (Views: 127.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552852751103" for 127.0.0.1 at 2019-03-17 14:59:11 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552852751103"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.5ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 14:59:11 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (81.6ms)
+Completed 200 OK in 137ms (Views: 131.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2019-03-17 14:59:11 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (82.0ms)
+Completed 200 OK in 129ms (Views: 125.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1552852752008" for 127.0.0.1 at 2019-03-17 14:59:12 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1552852752008"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/index.json.jbuilder (2.7ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/11/edit?_=1552852752009" for 127.0.0.1 at 2019-03-17 14:59:17 -0500
+Processing by EventsController#edit as JS
+  Parameters: {"_"=>"1552852752009", "id"=>"11"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:33
+  Rendering events/edit.js.haml
+  Rendered events/_form.html.haml (7.6ms)
+  Rendered events/_edit.html.haml (28.7ms)
+  Rendered events/edit.js.haml (50.3ms)
+Completed 200 OK in 106ms (Views: 80.3ms | ActiveRecord: 0.2ms)
+
+

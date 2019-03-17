@@ -47,7 +47,11 @@ initialize_calendar = function () {
             editable: true,
             eventLimit: true,
             events: '/events.json',
-
+            dayClick: function (date, jsEvent, view) {
+                $('#calendar').fullCalendar('changeView', 'agendaDay')
+                $('#calendar').fullCalendar('gotoDate', date);
+            },
+            
             select: function (start, end) {
                 $.getScript('/events/new', function () {
                     $('#event_date_range').val(moment(start).format("MM/DD/YYYY HH:mm") + ' - ' + moment(end).format("MM/DD/YYYY HH:mm"))
