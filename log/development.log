@@ -15855,3 +15855,1002 @@ Processing by DriversController#index as HTML
 Completed 200 OK in 103ms (Views: 99.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-26 14:24:12 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.8ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:22
+  Rendered onduties/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 610ms (Views: 586.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2019-03-26 14:24:46 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.haml:13
+  Rendered vehicles/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 120ms (Views: 111.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2019-03-26 14:24:46 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.haml:13
+  Rendered vehicles/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 129ms (Views: 125.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:24:46 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.5ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 122ms (Views: 106.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:24:47 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 119ms (Views: 114.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddInfoToUsers (20190326192622)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "license" varchar[0m
+  ↳ db/migrate/20190326192622_add_info_to_users.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "tel" varchar[0m
+  ↳ db/migrate/20190326192622_add_info_to_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "address" varchar[0m
+  ↳ db/migrate/20190326192622_add_info_to_users.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190326192622"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Migrating to AddInfoToUsers (20190326192622)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar DEFAULT NULL, "admin" boolean DEFAULT 0, "license" varchar DEFAULT NULL, "tel" varchar DEFAULT NULL, "address" varchar DEFAULT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license","tel","address")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license","tel","address" FROM "users"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar DEFAULT NULL, "admin" boolean DEFAULT 0, "license" varchar DEFAULT NULL, "tel" varchar DEFAULT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license","tel")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license","tel" FROM "ausers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar DEFAULT NULL, "admin" boolean DEFAULT 0, "license" varchar DEFAULT NULL, "tel" varchar DEFAULT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license","tel")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license","tel" FROM "users"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar DEFAULT NULL, "admin" boolean DEFAULT 0, "license" varchar DEFAULT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license" FROM "ausers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar DEFAULT NULL, "admin" boolean DEFAULT 0, "license" varchar DEFAULT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin","license" FROM "users"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar DEFAULT NULL, "admin" boolean DEFAULT 0)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","admin" FROM "ausers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190326192622"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddInfoToUsers (20190326192622)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "license" varchar[0m
+  ↳ db/migrate/20190326192622_add_info_to_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "tel" varchar[0m
+  ↳ db/migrate/20190326192622_add_info_to_users.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "address" varchar[0m
+  ↳ db/migrate/20190326192622_add_info_to_users.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190326192622"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddInfoToDrivers (20190326192810)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddInfoToDrivers (20190326192810)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddInfoToDrivers (20190326192810)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "drivers" ADD "license" varchar[0m
+  ↳ db/migrate/20190326192810_add_info_to_drivers.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "drivers" ADD "tel" varchar[0m
+  ↳ db/migrate/20190326192810_add_info_to_drivers.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "drivers" ADD "address" varchar[0m
+  ↳ db/migrate/20190326192810_add_info_to_drivers.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190326192810"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-03-26 14:30:31 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.1ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ app/views/onduties/index.html.haml:22
+  Rendered onduties/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 452ms (Views: 431.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2019-03-26 14:30:33 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.haml:13
+  Rendered vehicles/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 123ms (Views: 113.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2019-03-26 14:30:33 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.haml:13
+  Rendered vehicles/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 114ms (Views: 109.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:30:35 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (11.7ms)
+Completed 200 OK in 137ms (Views: 122.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:30:35 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 107ms (Views: 102.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:30:42 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 127ms (Views: 117.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:30:42 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 109ms (Views: 103.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:30:44 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 112ms (Views: 106.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:30:44 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 103ms (Views: 100.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:30:45 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 114ms (Views: 107.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:30:45 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 107ms (Views: 102.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:32:05 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/leonchen/Desktop/TAMUber/app/views/drivers/edit.html.haml:31: syntax error, unexpected keyword_ensure, expecting end-of-input
+Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.u
+                              ^):
+  
+app/views/drivers/edit.html.haml:31: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:32:17 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 122ms (Views: 115.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:32:19 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 130ms (Views: 123.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:32:19 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 120ms (Views: 117.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2019-03-26 14:32:20 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.haml:13
+  Rendered vehicles/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 113ms (Views: 107.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2019-03-26 14:32:20 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.haml:13
+  Rendered vehicles/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 120ms (Views: 115.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:32:20 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 108ms (Views: 103.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:32:21 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 114ms (Views: 110.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:32:35 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:15
+  Rendered drivers/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 108ms (Views: 103.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:33:18 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 110ms (Views: 105.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:33:19 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 123ms (Views: 115.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:33:20 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 105ms (Views: 100.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/drivers/8" for 127.0.0.1 at 2019-03-26 14:33:24 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LIPpB+IgLzT9SuoPjAQ8SC2kDBaAnNpwspP4HtD/9z5UglECkJ+hw3LVzYBmCwqb2kocgQFXKPGT3LBXtnNDBQ==", "driver"=>{"name"=>"Test", "isAvailable"=>"true", "Email"=>"aaa@tamu", "license"=>"aaa", "tel"=>"123", "address"=>"aa"}, "commit"=>"Update Driver Info", "id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+Unpermitted parameters: :license, :tel, :address
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:33:25 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 129ms (Views: 125.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:33:26 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 113ms (Views: 108.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:33:28 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 112ms (Views: 104.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:33:28 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 123ms (Views: 117.6ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/drivers/8" for 127.0.0.1 at 2019-03-26 14:33:34 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rHPTmGlKYYkRLebRzLOOAcBOlx3xZZPihkvRn2pH1YfUcmudG/Xvfp6ywV4mvLjSN6CHinCuYWOnBJnWDMthvA==", "driver"=>{"name"=>"Test", "isAvailable"=>"true", "Email"=>"aaa@tamu", "license"=>"123", "tel"=>"123", "address"=>"123"}, "commit"=>"Update Driver Info", "id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+Unpermitted parameters: :license, :tel, :address
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:33:34 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 115ms (Views: 110.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:33:36 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 111ms (Views: 104.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:33:36 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 111ms (Views: 106.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:33:38 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 113ms (Views: 109.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:33:38 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 109ms (Views: 105.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:34:29 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 114ms (Views: 108.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:34:29 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 114ms (Views: 109.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:34:52 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 115ms (Views: 109.2ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/drivers/8" for 127.0.0.1 at 2019-03-26 14:34:57 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jsomZESxfJ7oX2sg/oH4/VD02cth05dviUxL1eR0xS32y55hNg7yaWfATK8Ujs4upxrJXOAYZe6oAwOcgvhxFg==", "driver"=>{"name"=>"Test", "isAvailable"=>"true", "Email"=>"aaa@tamu", "license"=>"asdf", "tel"=>"asdf", "address"=>"asdf"}, "commit"=>"Update Driver Info", "id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+Unpermitted parameters: :license, :tel, :address
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:34:57 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 129ms (Views: 125.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/new" for 127.0.0.1 at 2019-03-26 14:35:54 -0500
+Processing by DriversController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/new.html.haml within layouts/application
+  Rendered drivers/new.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 114ms (Views: 105.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/new" for 127.0.0.1 at 2019-03-26 14:35:54 -0500
+Processing by DriversController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/new.html.haml within layouts/application
+  Rendered drivers/new.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 133ms (Views: 129.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/drivers" for 127.0.0.1 at 2019-03-26 14:36:07 -0500
+Processing by DriversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FHD9BlV2kVQPl+ZLLbhEfz54lwM77iliOdf1HohO2vxscUUDJ8kfo4AIwcTHt3KsyZaHlLol2+MYmL1X7sJuxw==", "driver"=>{"name"=>"Leo", "isAvailable"=>"treu", "Email"=>"asdf@asdf", "UIN"=>"asfd", "license"=>"aasd", "tel"=>"12345", "address"=>"111"}, "commit"=>"Create Driver"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :license, :tel, :address
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:26
+  [1m[36mDriver Create (0.8ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "created_at", "updated_at", "Email", "UIN") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Leo"], ["created_at", "2019-03-26 19:36:07.329393"], ["updated_at", "2019-03-26 19:36:07.329393"], ["Email", "asdf@asdf"], ["UIN", "asfd"]]
+  ↳ app/controllers/drivers_controller.rb:26
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:26
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:36:07 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 127ms (Views: 122.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/drivers/10" for 127.0.0.1 at 2019-03-26 14:36:12 -0500
+Processing by DriversController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bvjFLFMrEeQdZagdaXix8KlP5q2+rW4udy9yK+c00UgW+X0pIZSfE5L6j5KDd4cjXqH2Oj9mnK9WYDpigbhlcw==", "id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:42
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/drivers_controller.rb:42
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:42
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:36:12 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 119ms (Views: 114.8ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:37:13 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 468ms (Views: 446.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:37:15 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 117ms (Views: 108.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:37:15 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 101ms (Views: 96.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/drivers/8" for 127.0.0.1 at 2019-03-26 14:37:20 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KJBsaMg22HDgFxvcy7Y4tMS9VZlkOgWnDgzixkf5bCZQkdRtuolWh2+IPFMhuQ5nM1NFDuXx9yYvQ6qPIXXYHQ==", "driver"=>{"name"=>"Test", "isAvailable"=>"true", "Email"=>"aaa@tamu", "license"=>"asd", "tel"=>"asdf", "address"=>"asdf"}, "commit"=>"Update Driver Info", "id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+Unpermitted parameters: :license, :tel, :address
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:37:20 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 123ms (Views: 119.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/9/edit" for 127.0.0.1 at 2019-03-26 14:38:10 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 111ms (Views: 104.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/9/edit" for 127.0.0.1 at 2019-03-26 14:38:10 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 117ms (Views: 111.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/drivers/9" for 127.0.0.1 at 2019-03-26 14:38:15 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hGKnqtMw1+J+3rhAJzBpGtI3SyZQzzTOSJQG/c0r4sP8Yx+voY9ZFfFBn8/NP1/JJdlbsdEExk9p2060q6dW+A==", "driver"=>{"name"=>"LiLi", "isAvailable"=>"true", "Email"=>"tt@", "license"=>"", "tel"=>"", "address"=>""}, "commit"=>"Update Driver Info", "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+Unpermitted parameters: :license, :tel, :address
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[36mDriver Update (0.5ms)[0m  [1m[33mUPDATE "drivers" SET "Email" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["Email", "tt@"], ["updated_at", "2019-03-26 19:38:15.548683"], ["id", 9]]
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:38:15 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 118ms (Views: 113.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:38:54 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 134ms (Views: 115.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:38:55 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.6ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 120ms (Views: 110.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/drivers/8/edit" for 127.0.0.1 at 2019-03-26 14:38:55 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[36mCACHE Driver Load (0.0ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:32
+  Rendering drivers/edit.html.haml within layouts/application
+  Rendered drivers/edit.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 111ms (Views: 105.0ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/drivers/8" for 127.0.0.1 at 2019-03-26 14:38:59 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iGGuEVa6j8xqyJcyMFsAoBdSJj31G80Z1TBfxGeVKE7wYBYUJAUBO+VXsL3aVDZz4Lw2qnTQP5j0fxeNARmcdQ==", "driver"=>{"name"=>"Test", "isAvailable"=>"true", "Email"=>"aaa@tamu", "license"=>"123", "tel"=>"123", "address"=>"123"}, "commit"=>"Update Driver Info", "id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[36mDriver Update (0.5ms)[0m  [1m[33mUPDATE "drivers" SET "tel" = ?, "address" = ?, "license" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["tel", "123"], ["address", "123"], ["license", "123"], ["updated_at", "2019-03-26 19:38:59.510608"], ["id", 8]]
+  ↳ app/controllers/drivers_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:36
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/drivers" for 127.0.0.1 at 2019-03-26 14:38:59 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/views/drivers/index.html.haml:18
+  Rendered drivers/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 129ms (Views: 124.7ms | ActiveRecord: 0.5ms)
+
+

@@ -16,7 +16,15 @@
 			= text_field :driver, :Email, :class => "form-control"
 			
 		.form-group
-			= label :driver, :UIN, 'UIN'
-			= text_field :driver, :UIN, :class => "form-control"
+			= label :driver, :license, 'License'
+			= text_field :driver, :license, :class => "form-control"
+
+		.form-group
+			= label :driver, :tel, 'Tel'
+			= text_field :driver, :tel, :class => "form-control"
+
+		.form-group
+			= label :driver, :address, 'Address'
+			= text_field :driver, :address, :class => "form-control"
 
 		= submit_tag 'Update Driver Info', :class => "btn btn-outline-primary"
