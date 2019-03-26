@@ -16923,3 +16923,111 @@ Processing by OndutiesController#index as HTML
 Completed 200 OK in 106ms (Views: 97.8ms | ActiveRecord: 0.7ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "drivers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar, "UIN" varchar, "license" varchar, "tel" varchar, "address" varchar)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "events"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "start" datetime, "end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "driver_id" integer)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_events_on_driver_id" ON "events" ("driver_id")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "onduties"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "onduties" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "driverName" varchar, "plateNumber" varchar, "studentName" varchar, "studentId" varchar, "vehicleLat" float, "vehicleLng" float, "startLat" float, "startLng" float, "endLat" float, "endLng" float, "isFinished" boolean, "isAlert" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "requests"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "requests" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "studentId" varchar, "startLat" float, "startLng" float, "endLat" float, "endLng" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "admin" boolean DEFAULT 0, "license" varchar, "tel" varchar, "address" varchar)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "drivers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Email" varchar, "UIN" varchar, "license" varchar, "tel" varchar, "address" varchar)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "events"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "start" datetime, "end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "driver_id" integer)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_events_on_driver_id" ON "events" ("driver_id")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "onduties"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "onduties" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "driverName" varchar, "plateNumber" varchar, "studentName" varchar, "studentId" varchar, "vehicleLat" float, "vehicleLng" float, "startLat" float, "startLng" float, "endLat" float, "endLng" float, "isFinished" boolean, "isAlert" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "requests"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "requests" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "studentId" varchar, "startLat" float, "startLng" float, "endLat" float, "endLng" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "admin" boolean DEFAULT 0, "license" varchar, "tel" varchar, "address" varchar)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "isAvailable" boolean DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "development"], ["updated_at", "2019-03-26 20:51:36.979697"], ["key", "environment"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-03-26 20:51:36.982724"], ["key", "environment"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
