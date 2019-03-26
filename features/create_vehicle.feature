@@ -7,7 +7,7 @@ Feature: create vehicle
 	Scenario: Successfully create vehicle
 		Given I am on the homepage
 		When I click "Vehicles"
-		Then I should be on the vehicles page
+		Then I should be on vehicles page
 		When I click "Add New Vehicle"
 		Then I should be on the create new vehicle page
 		When I fill in "Name" with "Car1"
