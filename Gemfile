@@ -30,7 +30,7 @@ gem 'bcrypt-ruby', '~> 3.0.0', :require => "bcrypt"
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'jquery-rails'
-
+gem 'rails_12factor'
 # Build google map API
 gem 'gmaps4rails'
 

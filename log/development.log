@@ -17248,3 +17248,212 @@ Processing by EventsController#index as JSON
 Completed 200 OK in 24ms (Views: 15.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for ::1 at 2019-03-26 18:09:33 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.4ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered onduties/index.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 611ms (Views: 591.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/schedules" for ::1 at 2019-03-26 18:09:38 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (93.5ms)
+Completed 200 OK in 142ms (Views: 137.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schedules" for ::1 at 2019-03-26 18:09:38 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (89.7ms)
+Completed 200 OK in 146ms (Views: 143.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1553641778739" for ::1 at 2019-03-26 18:09:38 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1553641778739"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered events/index.json.jbuilder (1.8ms)
+Completed 200 OK in 22ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/new?_=1553641778740" for ::1 at 2019-03-26 18:09:53 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1553641778740"}
+  Rendering events/new.js.haml
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered events/_form.html.haml (97.8ms)
+  Rendered events/_new.html.haml (125.3ms)
+  Rendered events/new.js.haml (150.0ms)
+Completed 200 OK in 217ms (Views: 181.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/vehicles" for ::1 at 2019-03-26 18:09:58 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered vehicles/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 191ms (Views: 177.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/vehicles" for ::1 at 2019-03-26 18:09:58 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering vehicles/index.html.haml within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered vehicles/index.html.haml within layouts/application (4.7ms)
+Started GET "/drivers" for ::1 at 2019-03-26 18:09:58 -0500
+Completed 200 OK in 187ms (Views: 181.5ms | ActiveRecord: 0.6ms)
+
+
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered drivers/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 119ms (Views: 114.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/drivers" for ::1 at 2019-03-26 18:10:00 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered drivers/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 108ms (Views: 102.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers" for ::1 at 2019-03-26 18:10:00 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered drivers/index.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 118ms (Views: 114.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/new" for ::1 at 2019-03-26 18:10:01 -0500
+Processing by DriversController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering drivers/new.html.haml within layouts/application
+  Rendered drivers/new.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 111ms (Views: 104.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/new" for ::1 at 2019-03-26 18:10:01 -0500
+Processing by DriversController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering drivers/new.html.haml within layouts/application
+  Rendered drivers/new.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 118ms (Views: 115.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/drivers" for ::1 at 2019-03-26 18:10:08 -0500
+Processing by DriversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5LYRLHE++gApG+o/3f8Y0gzhMMx3s1EsVr0FPUw3jCA2Zrhwx9H+9xmR4PTAghpm2DzF4CmKZHKlnzqyqflNfg==", "driver"=>{"name"=>"123", "isAvailable"=>"123", "Email"=>"123", "UIN"=>"123", "license"=>"123", "tel"=>"123", "address"=>"123"}, "commit"=>"Create Driver"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDriver Create (0.5ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "created_at", "updated_at", "Email", "UIN", "license", "tel", "address") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "123"], ["created_at", "2019-03-26 23:10:08.827272"], ["updated_at", "2019-03-26 23:10:08.827272"], ["Email", "123"], ["UIN", "123"], ["license", "123"], ["tel", "123"], ["address", "123"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/drivers
+Completed 302 Found in 15ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/drivers" for ::1 at 2019-03-26 18:10:08 -0500
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering drivers/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered drivers/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/schedules" for ::1 at 2019-03-26 18:10:10 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (87.3ms)
+Completed 200 OK in 139ms (Views: 134.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/schedules" for ::1 at 2019-03-26 18:10:10 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering schedules/index.html.haml within layouts/application
+  Rendered schedules/index.html.haml within layouts/application (97.4ms)
+Completed 200 OK in 145ms (Views: 141.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-02-24&end=2019-04-07&_=1553641810744" for ::1 at 2019-03-26 18:10:10 -0500
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-02-24", "end"=>"2019-04-07", "_"=>"1553641810744"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start" BETWEEN ? AND ?[0m  [["start", "2019-02-24 00:00:00"], ["start", "2019-04-07 00:00:00"]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered events/index.json.jbuilder (1.6ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/new?_=1553641810745" for ::1 at 2019-03-26 18:10:11 -0500
+Processing by EventsController#new as JS
+  Parameters: {"_"=>"1553641810745"}
+  Rendering events/new.js.haml
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered events/_form.html.haml (12.0ms)
+  Rendered events/_new.html.haml (36.2ms)
+  Rendered events/new.js.haml (56.3ms)
+Completed 200 OK in 109ms (Views: 85.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/events" for ::1 at 2019-03-26 18:10:16 -0500
+Processing by EventsController#create as JS
+  Parameters: {"utf8"=>"✓", "event"=>{"title"=>"aa", "date_range"=>"03/06/2019 - 03/07/2019", "start"=>"2019-03-06 00:00", "end"=>"2019-03-07 00:00", "driver_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "start", "end", "created_at", "updated_at", "driver_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "aa"], ["start", "2019-03-06 00:00:00"], ["end", "2019-03-07 00:00:00"], ["created_at", "2019-03-26 23:10:16.063976"], ["updated_at", "2019-03-26 23:10:16.063976"], ["driver_id", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering events/create.js.haml
+  Rendered events/_event.json.jbuilder (2.6ms)
+  Rendered events/create.js.haml (28.4ms)
+Completed 200 OK in 104ms (Views: 59.7ms | ActiveRecord: 1.3ms)
+
+
