@@ -16864,3 +16864,62 @@ Completed 200 OK in 129ms (Views: 124.7ms | ActiveRecord: 0.5ms)
   ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/bin/rake:23
+Started GET "/" for ::1 at 2019-03-26 15:42:17 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+Processing by OndutiesController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-03-26 15:42:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.6ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (27.5ms)
+Started GET "/users/sign_in" for ::1 at 2019-03-26 15:42:21 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.7ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 923ms (Views: 920.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 4524ms (Views: 4512.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-03-26 15:42:26 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gx/Ze7V1j9Q4Wjb0Rh7raCrxMpWWNDx+K+Ee/S7QsY6F4oFm7Ej/bodvofsgCe1VNGIRmim8ZTZpFvC0YB42Nw==", "user"=>{"email"=>"leo021566@tamu.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "leo021566@tamu.edu"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+Completed 401 Unauthorized in 121ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gx/Ze7V1j9Q4Wjb0Rh7raCrxMpWWNDx+K+Ee/S7QsY6F4oFm7Ej/bodvofsgCe1VNGIRmim8ZTZpFvC0YB42Nw==", "user"=>{"email"=>"leo021566@tamu.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (1.9ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 227ms (Views: 113.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-03-26 15:42:29 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CzBFga9JLe4C42GGX93UnEPUSCfaMSUq4z8I1HeLs/8NzR2c9nRdVL3W9ok5ytKhXUdrKGW5fGKhyOadOUU0Rg==", "user"=>{"email"=>"leo021566@tamu.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "leo021566@tamu.edu"], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-03-26 15:42:29 -0500
+Processing by OndutiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendering onduties/index.html.haml within layouts/application
+  [1m[36mOnduty Load (0.2ms)[0m  [1m[34mSELECT "onduties".* FROM "onduties" WHERE "onduties"."isFinished" = ?[0m  [["isFinished", 0]]
+  ↳ /Users/leonchen/.rvm/gems/ruby-2.4.0/gems/activesupport-5.2.2.1/lib/active_support/subscriber.rb:101
+  Rendered onduties/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 106ms (Views: 97.8ms | ActiveRecord: 0.7ms)
+
+
