@@ -18,7 +18,7 @@ gem 'haml'
 gem 'devise'
 gem 'factory_girl_rails'
 # Use CoffeeScript for .coffee assets and views
-#gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -75,6 +75,7 @@ group :test do
   	gem 'webrat'
   	gem 'database_cleaner', '1.4.1'
 end
+
 
 gem 'pg', '~> 0.18'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
