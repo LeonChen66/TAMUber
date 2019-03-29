@@ -93,3 +93,24 @@ initialize_calendar = function () {
 };
 $(document).on('turbolinks:load', initialize_calendar);
 
+$(function(){
+	require([
+		"esri/Map",
+		"esri/views/MapView",
+		"esri/layers/TileLayer",
+		"dojo/domReady!"
+	], function(Map, MapView, TileLayer) {
+				var map = new Map();
+				var view = new MapView({
+						container: "amap",
+						map: map,
+						scale: 8000,
+		 				center: [-96.34696, 30.61364]
+				});
+				var layer = null, 
+				layerUrl = "https://gis.tamu.edu/arcgis/rest/services/FCOR/BaseMap_011019/MapServer",
+				layer = new TileLayer(layerUrl, null);
+				map.layers.add(layer);
+	});
+    
+})
