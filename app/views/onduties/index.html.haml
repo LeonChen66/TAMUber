@@ -1,5 +1,6 @@
 .container
-	#map
+	#viewDiv
+		#amap
 	%h3 #{flash[:notice]}
 
 	.table-responsive
@@ -32,22 +33,50 @@
 						%td= onduty.startLng
 						%td= onduty.endLat
 						%td= onduty.endLng
-
+// :css
+// 	#viewDiv {
+// 	padding: 0;
+// 	margin: 0;
+// 	height: 100%;
+// 	width: 100%;
+// 	}
 :javascript
-	let duties = #{ @onduties.to_json.html_safe };
-	let handler = Gmaps.build('Google');
-	handler.buildMap({
-		internal: { id: 'map' }
-	}, () => {
-		if (duties.length == 0) {
-			let marker = handler.addMarker(HRBB.loc);
-			handler.map.centerOn(marker);
-			handler.getMap().setZoom(HRBB.zoom);
-		} else {
-			let markers = handler.addMarkers(
-				duties.map(duty => getVehicleMarker(duty))
-			);
-			handler.bounds.extendWith(markers);
-			handler.fitMapToBounds();
-		}
+	require([
+		"esri/Map",
+		"esri/views/MapView",
+		"esri/layers/TileLayer",
+		"dojo/domReady!"
+	], function(Map, MapView, TileLayer) {
+				var map = new Map();
+				var view = new MapView({
+						container: "amap",
+						map: map,
+						scale: 8000,
+		 				center: [-96.34696, 30.61364]
+				});
+				var layer = null, 
+				layerUrl = "https://gis.tamu.edu/arcgis/rest/services/FCOR/BaseMap_011019/MapServer",
+				layer = new TileLayer(layerUrl, null);
+				map.layers.add(layer);
 	});
+
+
+
+
+	// let duties = #{ @onduties.to_json.html_safe };
+	// let handler = Gmaps.build('Google');
+	// handler.buildMap({
+	// 	internal: { id: 'map' }
+	// }, () => {
+	// 	if (duties.length == 0) {
+	// 		let marker = handler.addMarker(HRBB.loc);
+	// 		handler.map.centerOn(marker);
+	// 		handler.getMap().setZoom(HRBB.zoom);
+	// 	} else {
+	// 		let markers = handler.addMarkers(
+	// 			duties.map(duty => getVehicleMarker(duty))
+	// 		);
+	// 		handler.bounds.extendWith(markers);
+	// 		handler.fitMapToBounds();
+	// 	}
+	// });

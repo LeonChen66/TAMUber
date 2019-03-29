@@ -23,6 +23,24 @@
 	@extend .my-5
 }
 
+#viewDiv{
+    padding: 0;
+    margin: 0;
+    height: 500px;
+    width: 100%;
+    overflow:hidden;
+}
+#amap{
+    padding:0;
+    margin:0;
+    width:1110px;
+    height:500px;
+}
+
+#viewDiv .esri-widget{
+    display:none;
+}
+
 .calendarsize {
     border-radius: 20px;
     width: 1000px;
