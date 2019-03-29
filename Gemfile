@@ -82,7 +82,7 @@ gem 'pg', '~> 0.18'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # send letter locally
 gem "letter_opener", :group => :development
-gem 'fullcalendar-rails'
+gem 'fullcalendar-rails', '~> 2.3.1'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'faker'

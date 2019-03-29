@@ -22,6 +22,7 @@
 //= require bootstrap-sprockets
 //= require moment
 //= require fullcalendar
+//= require fullcalendar-columns
 //= require daterangepicker
 
 
@@ -46,9 +47,18 @@ initialize_calendar = function () {
             selectHelper: true,
             editable: true,
             eventLimit: true,
-            
+            // Below is the multiCol for Drivers display
+            defaultView: 'multiColAgendaDay',
             events: '/events.json',
-            
+            views: {
+                multiColAgendaDay:
+                {
+                    type: 'multiColAgenda',
+                    duration: { days: 1 },
+                    numColumns: 2,
+                    columnHeaders: ['Driver1','Driver2'],
+                }
+            },
             dayClick: function (date, jsEvent, view) {
                 $('#calendar').fullCalendar('changeView', 'agendaDay')
                 $('#calendar').fullCalendar('gotoDate', date);

@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.where(start: params[:start]..params[:end])
+    @drivers = Driver.all
   end
 
   def show
