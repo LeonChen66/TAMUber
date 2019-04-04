@@ -5,6 +5,12 @@ class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
   def index
+    drivers = Driver.all
+    gon.drivers_name = []
+    gon.driver_num = drivers.length
+    drivers.each do |item|
+      gon.drivers_name.push(item[:name])
+    end
   end
 
   # GET /schedules/1

@@ -137,6 +137,10 @@ GEM
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     gmaps4rails (2.1.2)
+    gon (6.2.1)
+      actionpack (>= 3.0)
+      multi_json
+      request_store (>= 1.0)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -201,6 +205,10 @@ GEM
     popper_js (1.14.5)
     public_suffix (3.0.3)
     puma (3.12.1)
+    rabl-rails (0.5.5)
+      activesupport (>= 4.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      railties (>= 4.2)
     rack (2.0.6)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -241,6 +249,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    request_store (1.4.1)
+      rack (>= 1.4)
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
@@ -360,6 +370,7 @@ DEPENDENCIES
   faker
   fullcalendar-rails (~> 2.3.1)
   gmaps4rails
+  gon
   haml
   haml-rails (~> 1.0)
   jbuilder (~> 2.5)
@@ -371,6 +382,7 @@ DEPENDENCIES
   momentjs-rails (>= 2.9.0)
   pg (~> 0.18)
   puma (~> 3.11)
+  rabl-rails
   rails (~> 5.2.1)
   rails-controller-testing
   rails_12factor
