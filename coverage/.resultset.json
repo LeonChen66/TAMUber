@@ -16,8 +16,8 @@
       ],
       "/Users/leonchen/Desktop/TAMUber/app/controllers/onduties_controller.rb": [
         1,
-        1,
-        1,
+        null,
+        null,
         1,
         null,
         1,
@@ -29,7 +29,7 @@
         null,
         null,
         1,
-        0,
+        4,
         null,
         null,
         1,
@@ -83,11 +83,11 @@
       ],
       "/Users/leonchen/Desktop/TAMUber/app/controllers/application_controller.rb": [
         1,
-        1,
+        null,
         null,
         1,
-        4,
-        4,
+        0,
+        0,
         null,
         null
       ],
@@ -120,6 +120,10 @@
         null
       ],
       "/Users/leonchen/Desktop/TAMUber/app/helpers/vehicles_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/leonchen/Desktop/TAMUber/app/models/onduty.rb": [
         1,
         null
       ],
@@ -188,10 +192,6 @@
         0,
         0
       ],
-      "/Users/leonchen/Desktop/TAMUber/app/models/onduty.rb": [
-        0,
-        0
-      ],
       "/Users/leonchen/Desktop/TAMUber/app/models/driver.rb": [
         0,
         0,
@@ -221,7 +221,7 @@
       ],
       "/Users/leonchen/Desktop/TAMUber/app/controllers/requests_controller.rb": [
         0,
-        0,
+        null,
         0,
         null,
         0,
@@ -302,6 +302,7 @@
         0,
         0,
         0,
+        0,
         null,
         0,
         0,
@@ -341,7 +342,7 @@
       ],
       "/Users/leonchen/Desktop/TAMUber/app/controllers/users_controller.rb": [
         0,
-        0,
+        null,
         null,
         0,
         0,
@@ -350,7 +351,7 @@
       ],
       "/Users/leonchen/Desktop/TAMUber/app/controllers/drivers_controller.rb": [
         0,
-        0,
+        null,
         0,
         null,
         0,
@@ -398,7 +399,7 @@
       ],
       "/Users/leonchen/Desktop/TAMUber/app/controllers/alerts_controller.rb": [
         0,
-        0,
+        null,
         0,
         null,
         0,
@@ -427,10 +428,16 @@
       "/Users/leonchen/Desktop/TAMUber/app/controllers/schedules_controller.rb": [
         0,
         0,
+        null,
+        null,
+        null,
+        null,
         0,
-        null,
-        null,
-        null,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         null,
@@ -513,7 +520,7 @@
         0
       ]
     },
-    "timestamp": 1553630955
+    "timestamp": 1554412027
   },
   "RSpec": {
     "coverage": {

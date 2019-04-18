@@ -6,7 +6,8 @@ json.array! @events do |event|
   json.start event.start.strftime(date_format)
   json.end event.end.strftime(date_format)
   json.driver_id event.driver_id unless event.driver_id.blank?
-  json.allDay event.all_day_event? ? true : false
+  json.allDay false
   json.update_url event_path(event, method: :patch)
   json.edit_url edit_event_path(event)
+  json.column event.driver_id-1
 end

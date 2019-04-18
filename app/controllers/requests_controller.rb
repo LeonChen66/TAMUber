@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-	before_action :authenticate_user!
+	# before_action :authenticate_user!
 	before_action :get_request, :only => [:show, :edit, :update, :destroy]
 
 	def get_request
