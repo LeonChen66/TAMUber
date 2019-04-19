@@ -9,5 +9,5 @@ json.array! @events do |event|
   json.allDay false
   json.update_url event_path(event, method: :patch)
   json.edit_url edit_event_path(event)
-  json.column event.driver_id-1
+  json.column @col[event.driver_id]
 end
