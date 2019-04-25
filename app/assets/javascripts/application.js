@@ -133,7 +133,7 @@ $(function(){
 
                 // Create the underlying map view
                 var view = new MapView({
-                    container: "viewDiv",
+                    container: "amap",
                     scale: 8000,
                     center: [-96.34696, 30.61364],
                     map: map
