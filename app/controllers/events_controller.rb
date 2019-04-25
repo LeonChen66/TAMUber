@@ -27,6 +27,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.save
+    redirect_to schedules_path
   end
 
   def update
