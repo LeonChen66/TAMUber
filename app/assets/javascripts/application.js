@@ -126,7 +126,7 @@ $(function () {
         // Create symbol for cars
         var carSymbol = {
             type: "picture-marker",
-            url: "https://i.imgur.com/6ZZyFuO.png", //"https://i.imgur.com/CPOfqqx.png",
+            url: "https://i.imgur.com/6ZZyFuO.png",
             width: "180px",
             height: "130px"
         };
@@ -144,9 +144,18 @@ $(function () {
             layerUrl = "https://gis.tamu.edu/arcgis/rest/services/FCOR/BaseMap_011019/MapServer",
             layer = new TileLayer(layerUrl, null);
         map.layers.add(layer);
+
+        var popInfo = {
+            Driver: "Handong Hao",
+            Vehicle: "tamu_1",
+            Status: "Available"
+        };
+
+
         var pointGraphic = new Graphic({
             geometry: point,
             symbol: carSymbol,
+            attributes: popInfo,
             // Create pop-up template, this template shows when a car icon is clicked
             popupTemplate: {
                 title: "{Info}",
@@ -155,7 +164,7 @@ $(function () {
                         type: "fields",
                         fieldInfos: [
                             {
-                                fieldName: "Drvier"
+                                fieldName: "Driver"
                             },
                             {
                                 fieldName: "Vehicle"
@@ -169,16 +178,13 @@ $(function () {
             }
         });
 
-
         setInterval(function () {
             // We change the latitude a little bit a time to create animation of car
             // By Quickly remove and add the icon, we make the car moves
             point.latitude += 0.00001;
             view.graphics.remove(pointGraphic);
             pointGraphic.geometry = point;
-            view.graphics.addMany([pointGraphic]);
-            i++;
+            view.graphics.add(pointGraphic);
         }, 75);
     });
-
 })
