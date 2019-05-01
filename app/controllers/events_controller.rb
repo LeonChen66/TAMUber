@@ -4,6 +4,12 @@ class EventsController < ApplicationController
   def index
     @events = Event.where(start: params[:start]..params[:end])
     @drivers = Driver.all
+    @col = {}
+    i = 0
+    @drivers.each do |item|
+      @col[item.id] = i
+      i+=1
+    end
   end
 
   def show
@@ -15,11 +21,13 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @drivers = Driver.all
   end
 
   def create
     @event = Event.new(event_params)
     @event.save
+    redirect_to schedules_path
   end
 
   def update

@@ -47,6 +47,9 @@ initialize_calendar = function () {
             selectHelper: true,
             editable: true,
             eventLimit: true,
+            allDaySlot: false,
+            displayEventTime:false,
+            eventColor: '#378006',
             // Below is the multiCol for Drivers display
             defaultView: 'multiColAgendaDay',
             events: '/events.json',
@@ -55,8 +58,9 @@ initialize_calendar = function () {
                 {
                     type: 'multiColAgenda',
                     duration: { days: 1 },
-                    numColumns: 2,
-                    columnHeaders: ['Driver1','Driver2'],
+                    numColumns: gon.driver_num,
+                    columnHeaders: gon.drivers_name,
+                    // ,
                 }
             },
             dayClick: function (date, jsEvent, view) {
@@ -183,5 +187,4 @@ $(function(){
                 view.graphics.add(pointGraphic);
             }, 75);
       });
-    
 })
