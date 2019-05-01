@@ -105,22 +105,83 @@ $(document).on('turbolinks:load', initialize_calendar);
 
 $(function(){
 	require([
-		"esri/Map",
-		"esri/views/MapView",
-		"esri/layers/TileLayer",
-		"dojo/domReady!"
-	], function(Map, MapView, TileLayer) {
-				var map = new Map();
-				var view = new MapView({
-						container: "amap",
-						map: map,
-						scale: 8000,
-		 				center: [-96.34696, 30.61364]
-				});
-				var layer = null, 
-				layerUrl = "https://gis.tamu.edu/arcgis/rest/services/FCOR/BaseMap_011019/MapServer",
-				layer = new TileLayer(layerUrl, null);
-				map.layers.add(layer);
-	});
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/layers/TileLayer",
+        "esri/Graphic",
+        "esri/symbols/PictureMarkerSymbol",
+        "dojo/domReady!"
+      ], function(Map, MapView, TileLayer, Graphic, PictureMarkerSymbol) {
+            var map = new Map();
+            var point = {
+                type: "point",
+                longitude: -96.35539,
+                latitude: 30.61348
+            };
+            
+            // Create symbol for cars
+            var carSymbol = {
+                type: "picture-marker", 
+                url: "https://i.imgur.com/6ZZyFuO.png", 
+                width: "180px",
+                height: "130px"
+            };
+            
+            // Create the underlying map view
+            var view = new MapView({
+                container: "amap",
+                scale: 8000,
+		 	    center: [-96.34696, 30.61364],
+                map: map
+            });
+            
+            // Aggie Map layer
+            var layer = null, 
+            layerUrl = "https://gis.tamu.edu/arcgis/rest/services/FCOR/BaseMap_011019/MapServer",
+            layer = new TileLayer(layerUrl, null);
+            map.layers.add(layer);
+            
+            var popInfo = {
+                Driver: "Handong Hao",
+                Vehicle: "tamu_1",
+                Status: "Available"
+            };
+
+            
+            var pointGraphic = new Graphic({
+                    geometry: point,
+                    symbol: carSymbol,
+                    attributes: popInfo,
+                    // Create pop-up template, this template shows when a car icon is clicked
+                    popupTemplate: {
+                      title: "{Info}",
+                      content: [
+                        {
+                          type: "fields",
+                          fieldInfos: [
+                            {
+                              fieldName: "Driver"
+                            },
+                            {
+                              fieldName: "Vehicle"
+                            },
+                            {
+                              fieldName: "Status"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+            });
+            
+            setInterval(function(){ 
+                // We change the latitude a little bit a time to create animation of car
+                // By Quickly remove and add the icon, we make the car moves
+                point.latitude += 0.00001;
+                view.graphics.remove(pointGraphic);
+                pointGraphic.geometry = point;
+                view.graphics.add(pointGraphic);
+            }, 75);
+      });
     
 })
